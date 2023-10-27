@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8%;
+    gap: 6%;
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -23,7 +23,7 @@
         top: 0;
         .titleHam{
             color: aliceblue;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: #bfa119;
         }
         .close {
@@ -70,8 +70,8 @@
         color: #e3e3e3;
         border: 0;
         border-radius: 25px;
-        height: 7%;
-        font-size: 1.1rem;
+        height: 6%;
+        font-size: 1.4rem;
         font-family: 'Libre Baskerville', serif;
     }
 
