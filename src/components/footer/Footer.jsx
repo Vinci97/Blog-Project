@@ -1,5 +1,5 @@
 import { SocialIcon } from "react-social-icons"
-import styles from "./Footer.module.scss"
+import styles from "./footer.module.scss"
 const Footer = ()=> {
     return(
         <div className={styles.Footer}>

@@ -1,4 +1,4 @@
-import styles from "./Hero.module.scss"
+import styles from "./hero.module.scss"
 const Hero = ({ toggleMenu })=> {
     return(
         <div className={styles.hero}>
