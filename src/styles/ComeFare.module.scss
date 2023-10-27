@@ -1,0 +1,10 @@
+.ComeFare{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .titolo{
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+}

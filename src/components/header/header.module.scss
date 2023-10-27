@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap');
+.Header {
+    background: #000000e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: -100%;
+    z-index: 3;
+    font-family: 'Libre Baskerville', serif;
+    padding-top: 25vh;
+    .headHam{
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items:center;
+        position: absolute;
+        top: 0;
+        .titleHam{
+            color: aliceblue;
+            font-size: 1.5rem;
+            color: #bfa119;
+        }
+        .close {
+            height: 25px;
+            width: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0);
+            border: 0;
+            border-radius: 50px;
+            font-size: 1rem;
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+            
+            &:before, &:after {
+              content: '';
+              position: absolute;
+              height: 3px;
+              width: 100%;
+              background: #bfa119;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+            
+            &:before {
+              transform: rotate(45deg);
+            }
+            
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
+    }
+    .argomento{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(85, 85, 85, 0);
+        color: #e3e3e3;
+        border: 0;
+        border-radius: 25px;
+        height: 7%;
+        font-size: 1.1rem;
+        font-family: 'Libre Baskerville', serif;
+    }
+
+}
