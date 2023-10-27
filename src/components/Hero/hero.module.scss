@@ -24,6 +24,7 @@
         background: rgba(0, 0, 0, 0);
         border: 0;
         div{
+            background: white;
             height: 0.5px;
             width: 60%;
             border: 1px solid ;
@@ -38,7 +39,6 @@
     }
     .logo{
         font-size: 2.5rem;
-        // color: rgb(169, 1, 1);
         color: #bfa119;
     }
 }
