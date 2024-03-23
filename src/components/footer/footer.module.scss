@@ -7,9 +7,10 @@
     bottom: 0;
     justify-content: center;
     padding: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
     font-size: 0.8rem;
     background: rgb(0, 0, 0);
-   
     font-family: 'Libre Baskerville', serif;
     h3{
         color: #bfa119;
@@ -21,17 +22,8 @@
         bottom: 13%; 
         color: white;
     }
-    .footerPartnership{
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        
-    }
     .footerSocial{
-        width: 33%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,7 +31,7 @@
         position: relative;
     }
     .footerContatti{
-        width: 34%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;

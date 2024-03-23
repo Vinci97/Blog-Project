@@ -3,10 +3,6 @@ import styles from "./footer.module.scss"
 const Footer = ()=> {
     return(
         <div className={styles.Footer}>
-            <div className={styles.footerPartnership}>
-                <h3>PARTNERSHIP</h3>
-                <p>a</p>
-            </div>
             <div className={styles.footerContatti}>
                 <h3>CONTATTI</h3>
                 <p className={styles.footerTxtContatti}><span>Michele Vacca:</span> web@MicheleVacca.it</p>
