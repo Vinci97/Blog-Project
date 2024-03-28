@@ -1,47 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap');
-.Footer{
-    height: 15vh;
+
+.Footer {
+    height: 120px;
     width: 100%;
     display: flex;
     position: absolute;
     bottom: 0;
     justify-content: center;
-    padding: 5px;
-    padding-left: 20%;
-    padding-right: 20%;
     font-size: 0.8rem;
     background: rgb(0, 0, 0);
     font-family: 'Libre Baskerville', serif;
-    h3{
+
+    h3 {
         color: #bfa119;
-        position: absolute;
-        top: 13%;
     }
-    p,.footerIconeSocial,.footerTxtContatti {
-        position: absolute;
-        bottom: 13%; 
-        color: white;
-    }
-    .footerSocial{
+
+    .footerSocial, .footerContatti {
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        position: relative;
-    }
-    .footerContatti{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        .footerTxtContatti{
+        justify-content: center;
+        gap: 10px;
+
+        .footerTxtContatti {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+        }
+    }
+
+    // Media query per tablet
+    @media (min-width: 768px) {
+        font-size: 0.9rem;
+        .footerSocial, .footerContatti {
+            gap: 15px;
+        }
+    }
+
+    // Media query per desktop
+    @media (min-width: 1024px) {
+        height: 150px;
+        flex-direction: row; // Cambia il layout in orizzontale per desktop
+        font-size: 1.5rem;
+
+        .footerSocial, .footerContatti {
+            width: 40%; // Riduci la larghezza per dare più spazio al contenuto
+            gap: 20px;
+
+            .footerTxtContatti {
+                flex-direction: row; // Visualizza il testo in riga per un layout più compatto
+                gap: 10px; // Aggiungi spazio tra gli elementi
+            }
         }
     }
 }

@@ -10,9 +10,9 @@ const Footer = ()=> {
             <div className={styles.footerSocial}>
                 <h3>SEGUIMI</h3>
                 <div className={styles.footerIconeSocial}>
-                    <SocialIcon className={styles.icon} network="twitter" bgColor="rgba(0, 0, 0, 0)"style={{ height: 25, width: 25 }}/>
-                    <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(0, 0, 0, 0)"style={{ height: 25, width: 25 }}/>
-                    <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(0, 0, 0, 0)"style={{ height: 25, width: 25}}/>
+                    <SocialIcon className={styles.icon} network="twitter" bgColor="rgba(0, 0, 0, 0)"style={{ height: 34, width: 34 }}/>
+                    <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(0, 0, 0, 0)"style={{ height: 34, width: 34 }}/>
+                    <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(0, 0, 0, 0)"style={{ height: 34, width: 34}}/>
                 </div>
             </div>
         </div>
