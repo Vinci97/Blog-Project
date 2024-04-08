@@ -1,9 +1,9 @@
 import Link from "next/link";
-import styles from "./Navbar.module.scss";
+import styles from "./navbar.module.scss"
 
 const Navbar = () => {
   return (
-    <div className={styles.Navbar}>
+    <div className={styles.navbar}>
       <Link href="/" className={styles.argomento}>HOME</Link>
       <Link href="/Criticainternazionale" className={styles.argomento}>CRITICA INTERNAZIONALE</Link>
       <Link href="/Politicaesocieta" className={styles.argomento}>POLITICA, GIOVANI E SOCIETÀ</Link>
