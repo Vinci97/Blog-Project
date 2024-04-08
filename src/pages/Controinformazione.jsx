@@ -2,16 +2,16 @@ import Hero from "@/components/Hero"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { useState } from "react"
-import styles from "../styles/CulturaETerritorio.module.scss"
-import Navbar from "@/components/navbar"
-const CulturaETerritorio = ()=> {
+import styles from "../styles/Controinformazione.module.scss"
+import Navbar from "@/components/Navbar"
+const Controinformazione = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
 
     const toggleMenu = () => {
      setMenuAperto(prevMenuAperto => !prevMenuAperto);
     };
     return(
-        <div className={styles.CulturaETerritorio}>
+        <div className={styles.Controinformazione}>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
@@ -20,4 +20,4 @@ const CulturaETerritorio = ()=> {
         </div>
     )
 }
-export default CulturaETerritorio
+export default Controinformazione

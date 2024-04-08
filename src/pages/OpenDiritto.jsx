@@ -2,16 +2,16 @@ import Hero from "@/components/Hero"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { useState } from "react"
-import styles from "../styles/FakeNews.module.scss"
-import Navbar from "@/components/navbar"
-const FakeNews = ()=> {
+import styles from "../styles/OpenDiritto.module.scss"
+import Navbar from "@/components/Navbar"
+const OpenDiritto = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
 
     const toggleMenu = () => {
      setMenuAperto(prevMenuAperto => !prevMenuAperto);
     };
     return(
-        <div className={styles.FakeNews}>
+        <div className={styles.OpenDiritto}>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
@@ -20,4 +20,4 @@ const FakeNews = ()=> {
         </div>
     )
 }
-export default FakeNews
+export default OpenDiritto

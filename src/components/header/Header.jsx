@@ -15,10 +15,10 @@ const Header = ({ isOpen, toggleMenu }) => {
         </button>
       </div>
       <Link href="/" className={styles.argomento} onClick={toggleMenu}>HOME</Link>
-      <Link href="/StudiInternazionali" className={styles.argomento} onClick={toggleMenu}>STUDI INTERNAZIONALI</Link>
+      <Link href="/Criticainternazionale" className={styles.argomento} onClick={toggleMenu}>STUDI INTERNAZIONALI</Link>
       <Link href="/Politicaesoceta" className={styles.argomento} onClick={toggleMenu}>POLITICA E SOCIETÀ</Link>
-      <Link href="/CulturaETerritorio" className={styles.argomento} onClick={toggleMenu}>CULTURA E TERRITORIO</Link>
-      <Link href="/Fake-news" className={styles.argomento} onClick={toggleMenu}>FAKE NEWS</Link>
+      <Link href="/Controinformazione" className={styles.argomento} onClick={toggleMenu}>CULTURA E TERRITORIO</Link>
+      <Link href="/OpenDiritto" className={styles.argomento} onClick={toggleMenu}>FAKE NEWS</Link>
       <Link href="/ComeFare" className={styles.argomento} onClick={toggleMenu}>COME FARE...?</Link>
     </div>
   );
