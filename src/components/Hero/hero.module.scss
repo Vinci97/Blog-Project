@@ -28,6 +28,9 @@
             width: 60%;
             border: 1px solid white;
         }
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
     .hamburger:hover{
         background: rgba(80, 80, 80, 0.741);

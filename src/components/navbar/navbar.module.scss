@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap');
+.Navbar{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(0, 0, 0);
+    font-family: 'Bebas Neue', sans-serif;
+    display: none;
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}

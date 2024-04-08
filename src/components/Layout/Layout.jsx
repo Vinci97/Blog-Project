@@ -3,6 +3,7 @@ import Hero from "../Hero"
 import Footer from "../footer"
 import Header from "../header"
 import styles from "./leyout.module.scss"
+import Navbar from "../navbar"
 const Layout =()=>{
     const [menuAperto, setMenuAperto] = useState(false);
     const toggleMenu = () => {
@@ -12,6 +13,7 @@ const Layout =()=>{
         <div className={styles.layout}>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
+            <Navbar/>
             <Footer/>
         </div>
     )

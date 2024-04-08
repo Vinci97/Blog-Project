@@ -3,6 +3,7 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { useState } from "react"
 import styles from "../styles/PoliticaeSoceta.module.scss"
+import Navbar from "@/components/navbar"
 const PoliticaeSoceta = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
 
@@ -13,6 +14,7 @@ const PoliticaeSoceta = ()=> {
         <div className={styles.PoliticaeSoceta}>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
+            <Navbar/>
             <h1 className={styles.titolo}>Politica e Soceta</h1>
             <Footer/>
         </div>
