@@ -3,7 +3,7 @@ import Hero from "../Hero"
 import Footer from "../footer"
 import Header from "../header"
 import styles from "./leyout.module.scss"
-import Navbar from "../Navbar"
+import Navbar from "../navbar"
 const Layout =()=>{
     const [menuAperto, setMenuAperto] = useState(false);
     const toggleMenu = () => {

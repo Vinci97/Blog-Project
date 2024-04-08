@@ -3,7 +3,7 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { useState } from "react"
 import styles from "../styles/Politicaesocieta.module.scss"
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/navbar"
 const Politicaesocieta = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
 

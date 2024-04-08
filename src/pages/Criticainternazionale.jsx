@@ -3,7 +3,7 @@ import styles from "../styles/Criticainternazionale.module.scss"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
 import { useState } from "react"
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/navbar"
 const Criticainternazionale = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
 
