@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "titolo": "art Politica",
+    "category": "politica",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 2,
+    "titolo": "art Politica",
+    "category": "politica",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 3,
+    "titolo": "art opendiritto",
+    "category": "opendiritto",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 4,
+    "titolo": "art Criticainternazionale",
+    "category": "criticainternazionale",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 5,
+    "titolo": "art controinformazione",
+    "category": "controinformazione",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 6,
+    "titolo": "art comefare",
+    "category": "comefare",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  },
+  {
+    "id": 7,
+    "titolo": "art comefare",
+    "category": "comefare",
+    "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores deserunt nesciunt nam quibusdam quo, eum veritatis consequuntur officia nobis atque. Qui unde minima pariatur impedit recusandae temporibus quis, sequi ullam!"
+  }
+]
