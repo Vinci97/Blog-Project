@@ -2,22 +2,11 @@ import Hero from "@/components/Hero"
 import styles from "../styles/Criticainternazionale.module.scss"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
-import { useEffect, useState } from "react"
-import fetchData from '../utils/fetchData';
+import {  useState } from "react"
 import Navbar from "@/components/navbar"
-import Notizie from "@/components/notizie"
+import ArticlesByCategory from "@/components/ArticlesByCategory"
 const Criticainternazionale = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
-    const [articles, setArticles] = useState([]);
-    useEffect(() => {
-        const getArticles = async () => {
-          const allArticles = await fetchData();
-          const filteredArticles = allArticles.filter(article => article.category === 'criticainternazionale');
-          setArticles(filteredArticles);
-        };
-    
-        getArticles();
-      }, []);
 
     const toggleMenu = () => {
      setMenuAperto(prevMenuAperto => !prevMenuAperto);
@@ -27,8 +16,11 @@ const Criticainternazionale = ()=> {
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
+            <div className={styles.container}>
+
             <h1 className={styles.titolo}>Critica Internazionale</h1>
-            <Notizie articles={articles} />
+            <ArticlesByCategory category="criticainternazionale" />
+            </div>
             <Footer/>
         </div>
     )

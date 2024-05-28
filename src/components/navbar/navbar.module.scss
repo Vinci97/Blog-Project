@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&display=swap');
 .navbar{
-    width: 100%;
-    margin: 0;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: rgb(0, 0, 0);
-    font-family: 'Bebas Neue', sans-serif;
     display: none;
     @media (min-width: 800px) {
+        width: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgb(0, 0, 0);
+        font-family: 'Bebas Neue', sans-serif;
         display: flex;
     }
 }

@@ -1,67 +1,51 @@
-// src/components/layout.module.scss
-.layout {
+// src/components/ArticlesByCategory.module.scss
+.articles {
   
-  
-  .articles {
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: black;
-    }
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    transition: background-color 0.3s, transform 0.3s;
-
     .article {
+      color: black;
       display: flex;
       flex-direction: column;
       align-items: center;
-     
       border: 1px solid #ddd;
       border-radius: 10px;
       background-color: #fff;
       transition: background-color 0.3s, transform 0.3s;
-
+  
       &:hover {
         background-color: #f9f9f9;
         transform: translateY(-5px);
       }
-
+  
       img {
-        max-width: 100%;
+       
         height: auto;
         border-radius: 10px;
         margin-bottom: 15px;
       }
-
+  
       h3 {
-        margin: 10px 0 5px;
+        
         font-size: 1.5em;
         
       }
-
+  
       p {
         font-size: 1em;
         color: #555;
         text-align: center;
         margin-bottom: 10px;
       }
-
+  
       .readMore {
         color: #0070f3;
         text-decoration: none;
         font-weight: bold;
-        
-
+        margin-top: 10px;
+  
         &:hover {
           text-decoration: underline;
         }
       }
     }
   }
-}
+  

@@ -81,14 +81,29 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-body {
+  width: 100%;
   color: rgb(var(--foreground-rgb));
   background: rgb(255, 255, 255)
+}
+body::-webkit-scrollbar {
+  width: 9px; /* larghezza della scrollbar */
+  
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); /* colore dello sfondo della traccia della scrollbar */
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* colore dello sfondo del thumb della scrollbar */
+  border-radius: 10px; /* arrotonda gli angoli del thumb della scrollbar */
+  
+}
+/* Cambia colore al passaggio del mouse */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* colore al passaggio del mouse */
+  position: absolute;
 }
 a {
   color: inherit;
