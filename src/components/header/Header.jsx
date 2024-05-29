@@ -3,7 +3,7 @@ import styles from "./header.module.scss";
 
 const Header = ({ isOpen, toggleMenu }) => {
   const menuStyle = {
-    position: 'absolute',
+    position: 'fixed',
     left: isOpen ? '0' : '-100%',
     transition: 'left 0.5s ease-out',
   };
