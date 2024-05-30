@@ -84,7 +84,8 @@ body {
   
   width: 100%;
   color: rgb(var(--foreground-rgb));
-  background: rgb(255, 255, 255)
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 9px; /* larghezza della scrollbar */
