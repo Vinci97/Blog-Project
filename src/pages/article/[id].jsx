@@ -6,6 +6,7 @@ import Header from '@/components/header';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import Markdown from 'react-markdown';
 
 const ArticlePage = () => {
   const router = useRouter();
@@ -36,8 +37,8 @@ const ArticlePage = () => {
   if (!article) {
     return <p>Loading...</p>;
   }
-  const contenutoParagrafi = article.contenuto.split('\\n\\n').map((paragrafo, index) => (
-    <ReactMarkdown key={index} className={styles.testo}>{paragrafo}</ReactMarkdown>
+  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => (
+    <Markdown key={index} className={styles.testo}>{paragrafo}</Markdown>
   ));
 
 
