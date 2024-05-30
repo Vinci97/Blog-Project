@@ -17,7 +17,11 @@ const Controinformazione = ()=> {
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
             <div className={styles.container}>
-
+            <div className={styles.ContTitolo}>
+               <div className={styles.line1}><div className={styles.line2}></div></div> 
+               <h1 className={styles.titolo}>Controinformazione</h1>
+            </div>
+            
             <h1 className={styles.titolo}>Controinformazione</h1>
             <ArticlesByCategory category="controinformazione" />
             </div>

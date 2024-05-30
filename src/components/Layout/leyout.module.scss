@@ -1,12 +1,29 @@
-// src/components/layout.module.scss
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .layout {
   
   
   .articles {
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .ContTitolo{
+      
+      margin: 15px;
+      display: flex;
+      .line1{
+
+          border: 1px solid black;
+          .line2{
+              border: 3px solid #bfa119;
+              height: 100%;
+          }
+      }
+      .titolo{
+          margin-left: 5px;
+          font-size: 1.5rem;
+          color: black;
+      }
     }
     color: black;
     display: flex;
@@ -38,13 +55,14 @@
         height: 225px;
         width: 300px;
         border-radius: 10px;
-        margin-bottom: 15px;
       }
 
       h3 {
-        
-        font-size: 1.2em;
-        
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 5px;
       }
 
       p {
@@ -52,12 +70,14 @@
         color: #555;
         text-align: center;
         margin-bottom: 10px;
+        margin-top: 5px;
       }
 
       .readMore {
         color: #0070f3;
         text-decoration: none;
         font-weight: bold;
+        margin-top: 5px;
         
 
         &:hover {

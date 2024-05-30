@@ -21,6 +21,7 @@ const Header = ({ isOpen, toggleMenu }) => {
       <Link href="/OpenDiritto" className={styles.argomento}>OPEN DIRITTO</Link>
       <Link href="/ComeFare" className={styles.argomento}>COME FARE...?</Link>
     </div>
+    
   );
 };
 

@@ -46,11 +46,12 @@
   },
   {
     "id": 6,
-    "titolo": "art comefare",
-    "autore": "",
-    "date": "",
-    "category": "comefare",
-    "img": "https://picsum.photos/300/300",
+    "titolo": "articolo politica",
+    "autore": "Michele Vacca",
+    "date": "15/05/2024",
+    "ora": "18:00",
+    "category": "politica",
+    "img": "../pics/politici.jpeg",
     "contenuto": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti nam totam quas, sapiente sit dolorum molestias vitae, at quidem beatae placeat illo quae, repudiandae quo possimus eligendi minima maiores quibusdam odit! Rerum illum sint distinctio nam error numquam ab molestias alias voluptas et neque voluptate reprehenderit, rem velit itaque. Enim ipsam, fuga veritatis vitae, delectus veniam dicta in ad quas laborum cupiditate quod repellendus, dolorum deleniti dolorem. Placeat saepe corporis iste eum at delectus, beatae eius excepturi voluptatum unde ab accusantium esse incidunt sunt voluptate fugit tenetur recusandae est ipsam? Tempora rem nulla assumenda, repellat dolorum dolores voluptatum id officia quaerat culpa reprehenderit animi aut consequuntur sit saepe accusantium itaque, esse architecto rerum iure voluptatem, dolorem distinctio consequatur ipsa! Aperiam est velit ea accusamus accusantium similique voluptate optio harum amet, laborum reprehenderit magni ducimus voluptatem, temporibus rerum dolores architecto, iusto quas nesciunt ipsum tempore quae numquam repudiandae? Tempore illum molestiae cum assumenda natus dignissimos aut perspiciatis culpa hic quibusdam quam quasi nostrum autem perferendis voluptate asperiores voluptas, illo qui est, reprehenderit ipsam adipisci ullam repellat mollitia! Aspernatur perspiciatis at cum deserunt facilis animi modi beatae, dolore cumque esse eaque temporibus magnam accusantium impedit vitae voluptate dolor aperiam quos dolores!"
   }
   ,

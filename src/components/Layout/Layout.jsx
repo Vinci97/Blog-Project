@@ -32,7 +32,10 @@ const Layout =()=>{
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
             <div className={styles.articles}>
-                    <h2>Ultimi Articoli</h2>
+              <div className={styles.ContTitolo}>
+                 <div className={styles.line1}><div className={styles.line2}></div></div> 
+                 <h1 className={styles.titolo}>POST RECENTI</h1>
+              </div>
                     {articles.map(article => (
                     <Link href={`/article/${article.id}`}>
                       <div key={article.id} className={styles.article}>

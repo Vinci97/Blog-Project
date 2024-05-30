@@ -3,9 +3,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .titolo{
-        margin: 20px;
-        font-size: 1.5rem;
-        color: black;
+    .ContTitolo{
+        width: 100%;
+        margin: 15px;
+        display: flex;
+        .line1{
+
+            border: 1px solid black;
+            .line2{
+                border: 3px solid #bfa119;
+                height: 100%;
+            }
+        }
+        .titolo{
+            margin-left: 5px;
+            font-size: 1.5rem;
+            color: black;
+        }
     }
 }

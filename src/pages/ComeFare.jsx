@@ -17,7 +17,10 @@ const ComeFare = ()=> {
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
             <div className={styles.container}>
-            <h1 className={styles.titolo}>Come Fare</h1>
+            <div className={styles.ContTitolo}>
+               <div className={styles.line1}><div className={styles.line2}></div></div> 
+               <h1 className={styles.titolo}>Come Fare</h1>
+            </div>
             <ArticlesByCategory category="comefare" />
             </div>
             <Footer/>
