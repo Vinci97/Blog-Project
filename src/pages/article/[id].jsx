@@ -1,7 +1,7 @@
 // src/pages/article/[id].js
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import styles from '../../styles/article.module.scss';
+import styles from './article.module.scss';
 import Header from '@/components/header';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/navbar';
@@ -36,6 +36,10 @@ const ArticlePage = () => {
   if (!article) {
     return <p>Loading...</p>;
   }
+  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => (
+    <p key={index} className={styles.testo}>{paragrafo}</p>
+  ));
+
 
   return (
     <div className={styles.article}>
@@ -45,7 +49,14 @@ const ArticlePage = () => {
       <div className={styles.contenuto}>
         <h1>{article.titolo}</h1>
         <img src={article.img} alt={article.titolo} />
-        <p>{article.contenuto}</p>
+        <div className={styles.line}></div>
+         <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
+        <div className={styles.line}></div>
+        <div className={styles.orario}>
+        <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
+        </div>
+        <br/><br/>
+        <div>{contenutoParagrafi}</div>
       </div>
       <Footer/>
     </div>

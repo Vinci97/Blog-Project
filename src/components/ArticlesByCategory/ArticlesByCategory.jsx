@@ -26,16 +26,19 @@ const ArticlesByCategory = ({ category }) => {
   if (loading) {
     return <p>Loading...</p>;
   }
+ 
+// Creazione dei paragrafi
+creaParagrafi(jsonData.testo);
   return (
     <div className={styles.articles}>
       {articles.map(article => (
       <Link href={`/article/${article.id}`}>
         <div key={article.id} className={styles.article}>
-          <img src={article.img} alt={article.titolo} />
           <h3>{article.titolo}</h3>
-          <p>{article.contenuto.split(" ").slice(0, 10).join(" ")}...</p>
+          <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
+          <img src={article.img} alt={article.titolo} />
         </div>
-      <a className={styles.readMore}>Read more</a>
+      <a className={styles.readMore}></a>
       </Link>
       ))}
     </div>
