@@ -11,7 +11,7 @@ const ArticlesByCategory = ({ category }) => {
       try {
         const response = await fetch('/articoli.json');
         const data = await response.json();
-        const filteredArticles = data.filter(article => article.category === category);
+        const filteredArticles = data.filter(article => article.category === category).sort((a, b) => b.id - a.id);
         setArticles(filteredArticles);
         setLoading(false);
       } catch (error) {
@@ -27,8 +27,8 @@ const ArticlesByCategory = ({ category }) => {
     return <p>Loading...</p>;
   }
  
-// Creazione dei paragrafi
-creaParagrafi(jsonData.testo);
+
+
   return (
     <div className={styles.articles}>
       {articles.map(article => (
