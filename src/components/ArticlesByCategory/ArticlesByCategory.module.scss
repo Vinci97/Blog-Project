@@ -1,7 +1,8 @@
 // src/components/ArticlesByCategory.module.scss
 .articles {
-  
-    .article {
+  .article {
+      width: 800px;
+      padding: 30px;
       color: black;
       display: flex;
       flex-direction: column;
