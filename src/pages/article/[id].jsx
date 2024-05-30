@@ -36,8 +36,8 @@ const ArticlePage = () => {
   if (!article) {
     return <p>Loading...</p>;
   }
-  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => (
-    <p key={index} className={styles.testo}>{paragrafo}</p>
+  const contenutoParagrafi = article.contenuto.split('\\n\\n').map((paragrafo, index) => (
+    <ReactMarkdown key={index} className={styles.testo}>{paragrafo}</ReactMarkdown>
   ));
 
 
