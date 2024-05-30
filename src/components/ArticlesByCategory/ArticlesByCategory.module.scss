@@ -1,8 +1,6 @@
 // src/components/ArticlesByCategory.module.scss
 .articles {
   .article {
-      width: 800px;
-      padding: 30px;
       color: black;
       display: flex;
       flex-direction: column;
@@ -52,6 +50,8 @@
     }
     @media (min-width: 800px) {      
         .article {
+        width: 800px;
+        padding: 30px;
         img{
           height: 525px;
           width: 700px;
