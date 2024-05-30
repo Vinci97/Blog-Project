@@ -17,8 +17,9 @@ const Criticainternazionale = ()=> {
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
             <div className={styles.container}>
-
-            <h1 className={styles.titolo}>Critica Internazionale</h1>
+            <div className={styles.ContTitolo}>
+               <div className={styles.line1}><div className={styles.line2}></div></div> <h1 className={styles.titolo}>Critica Internazionale</h1>
+            </div>
             <ArticlesByCategory category="criticainternazionale" />
             </div>
             <Footer/>

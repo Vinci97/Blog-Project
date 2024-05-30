@@ -1,4 +1,3 @@
-// src/pages/article/[id].js
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import styles from './article.module.scss';
@@ -15,7 +14,7 @@ const ArticlePage = () => {
   const [menuAperto, setMenuAperto] = useState(false);
   const toggleMenu = () => {
     setMenuAperto(prevMenuAperto => !prevMenuAperto);
-   };
+  };
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -37,10 +36,16 @@ const ArticlePage = () => {
   if (!article) {
     return <p>Loading...</p>;
   }
-  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => (
-    <Markdown key={index} className={styles.testo}>{paragrafo}</Markdown>
-  ));
 
+  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => {
+    const isHeading = paragrafo.trim().startsWith('# ');
+    const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
+    return (
+      <Markdown key={index} className={markdownClass}>
+        {paragrafo}
+      </Markdown>
+    );
+  });
 
   return (
     <div className={styles.article}>
@@ -48,13 +53,13 @@ const ArticlePage = () => {
       <Hero toggleMenu={toggleMenu}/>
       <Navbar/>
       <div className={styles.contenuto}>
-        <h1>{article.titolo}</h1>
+        <h1 className={styles.titolo}>{article.titolo}</h1>
         <img src={article.img} alt={article.titolo} />
         <div className={styles.line}></div>
-         <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
+        <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
         <div className={styles.line}></div>
         <div className={styles.orario}>
-        <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
+          <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
         </div>
         <br/><br/>
         <div>{contenutoParagrafi}</div>
@@ -65,3 +70,4 @@ const ArticlePage = () => {
 };
 
 export default ArticlePage;
+

@@ -35,8 +35,8 @@ const ArticlesByCategory = ({ category }) => {
       <Link href={`/article/${article.id}`}>
         <div key={article.id} className={styles.article}>
           <h3>{article.titolo}</h3>
-          <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
           <img src={article.img} alt={article.titolo} />
+          <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
         </div>
       <a className={styles.readMore}></a>
       </Link>

@@ -1,32 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 .article {
-  font-family: Arial, sans-serif;
-  color: black;
+  
   width: auto;
   text-align: justify;
   .contenuto{
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      font-size: 2em;
-      margin-left: 5px;
-      margin-right: 5px;
-     
+    margin: 10px;
+    .titolo{
+      text-align:center;
+      margin-bottom: 5px;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    .sottotitolo {
+      font-size: 0.6rem;
+      font-family: 'Bebas Neue', sans-serif;
+      margin: 10px;
+      margin-left: 0;
       
     }
   
     img {
       
-      height: 225px;
-      width: 300px;
+      height: 240px;
+      width: 320px;
       border-radius: 5px;
       margin-bottom: 10px;
      
     }
     .line{
      width: 100%;
-     border: 1px solid black;
+     border-top: 1px solid  black;
+
     }
     .autore{
       width: 100%;
@@ -48,7 +58,7 @@
     }
   
     .testo {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-top: 10px;
       margin-left: 5px;
       margin-right: 5px;
@@ -74,11 +84,6 @@
       border-left:1px solid black  ;
       padding-left: 50px;
       padding-right: 50px;
-      h1 {
-        
-        margin: 10px;
-        
-      }
       img{
    
         height: 525px;

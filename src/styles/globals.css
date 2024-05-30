@@ -79,9 +79,10 @@
   margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 html,
 body {
-  
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   color: rgb(var(--foreground-rgb));
   background: rgb(255, 255, 255);
