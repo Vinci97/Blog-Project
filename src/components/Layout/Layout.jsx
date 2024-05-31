@@ -5,6 +5,7 @@ import Header from "../header";
 import styles from "./leyout.module.scss";
 import Navbar from "../navbar";
 import Link from "next/link";
+import { Noto_Emoji } from "next/font/google";
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
@@ -36,8 +37,10 @@ const Layout = () => {
       <Navbar />
       <div className={styles.articles}>
         <div className={styles.ContTitolo}>
-          <div className={styles.line1}>
+          <div className={styles.freccia}>
+            <div className={styles.line1}></div>
             <div className={styles.line2}></div>
+            <div className={styles.line3}></div>
           </div>
           <h1 className={styles.titolo}>POST RECENTI</h1>
         </div>

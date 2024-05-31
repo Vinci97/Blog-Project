@@ -1,6 +1,4 @@
 .layout {
-  
-  
   .articles {
     color: black;
     display: flex;
@@ -11,16 +9,46 @@
     transition: background-color 0.3s, transform 0.3s;
     padding-bottom: 5px;
     .ContTitolo{
-      
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 15px;
       display: flex;
-      .line1{
-
-          border: 1px solid black;
-          .line2{
-              border: 3px solid #bfa119;
-              height: 100%;
+      .freccia{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 48px;
+        display: flex;
+        
+        .line1{
+          position: relative;
+          background: #bfa119;
+          height: 35px;
+          width:  12px;
+          border-radius: 0 0 50% 50%;
+  
           }
+        .line2{
+          background: #bfa119;
+          position: absolute;
+          right: 17px;
+          bottom: 8px;
+          height: 9px;
+          width:  27px;
+          rotate: 48deg;
+        }
+        .line3{
+          background: #bfa119;
+          height: 9px;
+          width:  27px;
+          rotate: -48deg;
+          position: absolute;
+          left: 17px;
+          bottom: 8px;
+        }
       }
       .titolo{
           margin-left: 5px;

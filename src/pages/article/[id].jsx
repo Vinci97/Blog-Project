@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Markdown from 'react-markdown';
+import { SocialIcon } from 'react-social-icons';
 
 const ArticlePage = () => {
   const router = useRouter();
@@ -55,13 +56,21 @@ const ArticlePage = () => {
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
         <img src={article.img} alt={article.titolo} />
-        <div className={styles.line}></div>
-        <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
-        <div className={styles.line}></div>
+        <div className={styles.line}>
+          <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
+          <img className={styles.Michele} src="/pics/Michele.png" alt="Michele blog io politica informazione" />
+        </div>
         <div className={styles.orario}>
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
         </div>
-        <br/><br/>
+        <div className={styles.social}>
+          <SocialIcon className={styles.icon} network="whatsapp"bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
+          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
+          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
+          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26 }}/>
+          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26}}/>
+        </div>
+        <br/>
         <div>{contenutoParagrafi}</div>
       </div>
       <Footer/>
