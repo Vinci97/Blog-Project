@@ -26,20 +26,18 @@ const ArticlesByCategory = ({ category }) => {
   if (loading) {
     return <p>Loading...</p>;
   }
- 
-
 
   return (
     <div className={styles.articles}>
       {articles.map(article => (
-      <Link href={`/article/${article.id}`}>
-        <div key={article.id} className={styles.article}>
-          <h3>{article.titolo}</h3>
-          <img src={article.img} alt={article.titolo} />
-          <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
-        </div>
-      <a className={styles.readMore}></a>
-      </Link>
+        <Link key={article.id} href={`/article/${article.id}`} passHref>
+          <div className={styles.article}>
+            <h3>{article.titolo}</h3>
+            <img src={article.img} alt={article.titolo} />
+            <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
+            <a className={styles.readMore}>Read More</a>
+          </div>
+        </Link>
       ))}
     </div>
   );
