@@ -21,8 +21,6 @@ const Controinformazione = ()=> {
                <div className={styles.line1}><div className={styles.line2}></div></div> 
                <h1 className={styles.titolo}>Controinformazione</h1>
             </div>
-            
-            <h1 className={styles.titolo}>Controinformazione</h1>
             <ArticlesByCategory category="controinformazione" />
             </div>
             <Footer/>
