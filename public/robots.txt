@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.tuosito.com
+Host: https://www.il-blog-di-michele-vacca.it/
 
 # Sitemaps
-Sitemap: https://www.tuosito.com/sitemap.xml
+Sitemap: https://www.il-blog-di-michele-vacca.it/sitemap.xml
