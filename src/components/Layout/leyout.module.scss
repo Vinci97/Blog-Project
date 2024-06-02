@@ -38,13 +38,13 @@
           bottom: 8px;
           height: 9px;
           width:  27px;
-          rotate: 48deg;
+          transform: rotate(48deg);
         }
         .line3{
           background: #bfa119;
           height: 9px;
           width:  27px;
-          rotate: -48deg;
+          transform: rotate(-48deg);
           position: absolute;
           left: 17px;
           bottom: 8px;
