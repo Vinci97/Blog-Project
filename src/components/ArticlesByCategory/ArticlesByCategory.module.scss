@@ -52,6 +52,9 @@
     }
     @media (min-width: 800px) {      
         .article {
+          h3{
+            font-size: 1.8rem;
+          }
         width: 800px;
         padding: 30px;
         gap: 5px;
