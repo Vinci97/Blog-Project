@@ -44,7 +44,7 @@ const Layout = () => {
           <h1 className={styles.titolo}>POST RECENTI</h1>
         </div>
         {articles.map(article => (
-          <Link href={`/article/${article.id}`} key={article.id}>
+          <Link href={`/article/${article.id}-${article.slug}`} key={article.id}>
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />

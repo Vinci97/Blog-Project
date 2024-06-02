@@ -30,7 +30,7 @@ const ArticlesByCategory = ({ category }) => {
   return (
     <div className={styles.articles}>
       {articles.map(article => (
-        <Link key={article.id} href={`/article/${article.id}`} passHref>
+        <Link key={article.id} href={`/article/${article.id}-${article.slug}`} passHref>
           <div className={styles.article}>
             <h3>{article.titolo}</h3>
             <img src={article.img} alt={article.titolo} />
