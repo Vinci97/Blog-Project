@@ -2,6 +2,7 @@
   
   {
     "id":1,
+    "slug": "IL DISEGNO DI LEGGE SUL PREMIERATO: UNA PANORAMICA CRITICA",
     "titolo": "IL DISEGNO DI LEGGE SUL PREMIERATO: UNA PANORAMICA CRITICA",
     "autore": "Michele Vacca",
     "date": "01/06/2024",
@@ -12,6 +13,7 @@
   },
   {
     "id": 2,
+    "slug": "LE SANZIONI AGLI IMPRENDITORI RUSSI VIOLANO IL DIRITTO DELL'UE? IL CASO ABRAMOVIČ",
     "titolo": "LE SANZIONI AGLI IMPRENDITORI RUSSI VIOLANO IL DIRITTO DELL'UE? IL CASO ABRAMOVIČ",
     "autore": "Michele Vacca",
     "date": "30/05/2024",
@@ -23,6 +25,7 @@
   ,
   {
     "id": 3,
+    "slug": "PERCHÉ I GIOVANI SI ALLONTANANO DALLA POLITICA? UN'ANALISI DELLE ELEZIONI EUROPEE 2024",
     "titolo": "PERCHÉ I GIOVANI SI ALLONTANANO DALLA POLITICA? UN'ANALISI DELLE ELEZIONI EUROPEE 2024 ",
     "autore": "Michele Vacca",
     "date": "15/05/2024",
@@ -34,6 +37,7 @@
   ,
   {
     "id": 4,
+    "slug": "IL VERO VOLTO DELLA DISOCCUPAZIONE IN ITALIA",
     "titolo": "IL VERO VOLTO DELLA DISOCCUPAZIONE IN ITALIA",
     "autore": "Michele Vacca",
     "date": "02/06/2024",
@@ -45,6 +49,7 @@
   ,
   {
     "id": 5,
+    "slug": "COME OTTENERE LO SPID: GUIDA COMPLETA E SEMPLICE",
     "titolo": "COME OTTENERE LO SPID: GUIDA COMPLETA E SEMPLICE",
     "autore": "Michele Vacca",
     "date": "02/06/2024",
@@ -56,6 +61,7 @@
   ,
   {
     "id": 6,
+    "slug": "CANNABIS LEGALE IN ITALIA: DISINFORMAZIONE E VERITÀ SULLA PROPOSTA DELLA LEGA",
     "titolo": "CANNABIS LEGALE IN ITALIA: DISINFORMAZIONE E VERITÀ SULLA PROPOSTA DELLA LEGA",
     "autore": "Michele Vacca",
     "date": "02/06/2024",
