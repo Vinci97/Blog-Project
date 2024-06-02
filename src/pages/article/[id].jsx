@@ -10,6 +10,7 @@ import { SocialIcon } from 'react-social-icons';
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
+import remarkGfm from 'remark-gfm';
 
 const ArticlePage = ({ article }) => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const ArticlePage = ({ article }) => {
     const isHeading = paragrafo.trim().startsWith('# ');
     const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
     return (
-      <Markdown key={index} className={markdownClass}>
+      <Markdown key={index} className={markdownClass} remarkPlugins={[remarkGfm]}>
         {paragrafo}
       </Markdown>
     );

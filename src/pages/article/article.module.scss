@@ -80,11 +80,8 @@
   .social{
     margin-top: 8px;
     width: 100%;
-   display: flex;
-   gap: 4px;
-   
-   ;
-    
+    display: flex;
+    gap: 5px;
   }
   
 }
@@ -95,6 +92,15 @@
     align-items: center;
     justify-content: center;
     .contenuto{
+       a {
+        color: blue;
+        text-decoration: underline; 
+      }
+      
+       a:hover {
+        color: darkblue; 
+        text-decoration: none; 
+      } 
       display: flex;
       flex-direction: column;
       align-items: center;
