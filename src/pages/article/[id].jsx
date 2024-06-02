@@ -13,7 +13,6 @@ import path from 'path';
 
 const ArticlePage = ({ article }) => {
   const router = useRouter();
-  const { id } = router.query;
   const [menuAperto, setMenuAperto] = useState(false);
   const toggleMenu = () => {
     setMenuAperto(prevMenuAperto => !prevMenuAperto);
