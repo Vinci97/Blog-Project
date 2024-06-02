@@ -5,7 +5,6 @@ import Header from "../header";
 import styles from "./leyout.module.scss";
 import Navbar from "../navbar";
 import Link from "next/link";
-import { Noto_Emoji } from "next/font/google";
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
