@@ -19,7 +19,7 @@ const ComeFare = ()=> {
             <div className={styles.container}>
             <div className={styles.ContTitolo}>
                <div className={styles.line1}><div className={styles.line2}></div></div> 
-               <h1 className={styles.titolo}>Come Fare</h1>
+               <h1 className={styles.titolo}>Come Fare...?</h1>
             </div>
             <ArticlesByCategory category="comefare" />
             </div>
