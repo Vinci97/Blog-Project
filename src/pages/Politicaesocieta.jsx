@@ -20,7 +20,7 @@ const Politicaesocieta = ()=> {
             <div className={styles.container}>
             <div className={styles.ContTitolo}>
                <div className={styles.line1}><div className={styles.line2}></div></div> 
-               <h1 className={styles.titolo}>Politica e Società</h1>
+               <h1 className={styles.titolo}>Politica, Giovani e Società</h1>
             </div>
             
             <ArticlesByCategory category="politica" />
