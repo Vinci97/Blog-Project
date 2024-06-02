@@ -64,11 +64,10 @@ const ArticlePage = () => {
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
         </div>
         <div className={styles.social}>
-          <SocialIcon className={styles.icon} network="whatsapp"bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
-          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
-          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26,}}/>
-          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26 }}/>
-          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)"style={{ height: 26, width: 26}}/>
+          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)"style={{ height: 34, width: 34 }} url="https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1"/>
+          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)"style={{ height: 34, width: 34}}/>
+          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)"style={{ height: 34, width: 34 }}url="https://www.instagram.com/vacca_michele/"/>
+          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)"style={{ height: 34, width: 34}} url="https://www.facebook.com/michele.vacca.99"/>
         </div>
         <br/>
         <div>{contenutoParagrafi}</div>

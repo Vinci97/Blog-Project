@@ -50,6 +50,7 @@ const Layout = () => {
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />
               <p>{article.contenuto.split(" ").slice(0, 10).join(" ")}...</p>
+              <a className={styles.readMore}>Continua a leggere</a>
             </div>
           </Link>
         ))}
