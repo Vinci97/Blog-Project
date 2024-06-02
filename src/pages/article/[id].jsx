@@ -36,8 +36,10 @@ const ArticlePage = ({ article }) => {
   return (
     <div className={styles.article}>
       <Head>
-        <title>{article.titolo} - Michele Vacca</title>
-        <meta name="description" content={article.descrizione} />
+        <title>MicheleVacca.it</title>
+        <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/ico/Michele.ico" />
       </Head>
       <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
       <Hero toggleMenu={toggleMenu}/>

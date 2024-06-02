@@ -5,6 +5,7 @@ import { useState } from "react"
 import styles from "../styles/Politicaesocieta.module.scss"
 import Navbar from "@/components/navbar"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
+import Head from "next/head"
 
 const Politicaesocieta = ()=> {
     const [menuAperto, setMenuAperto] = useState(false);
@@ -14,6 +15,12 @@ const Politicaesocieta = ()=> {
     };
     return(
         <div className={styles.Politicaesocieta}>
+            <Head>
+                <title>MicheleVacca.it</title>
+                <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/ico/Michele.ico" />
+            </Head>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
             <Navbar/>
