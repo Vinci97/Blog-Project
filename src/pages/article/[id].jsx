@@ -54,7 +54,7 @@ const ArticlePage = ({ article }) => {
         <img src={article.img} alt={article.titolo} />
         <div className={styles.line}>
           <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
-          <img className={styles.Michele} src="/pics/Michele.png" alt="Michele blog io politica informazione" />
+          <img className={styles.Michele} src="/pics/Michele.png" alt="Michele blog io politica informazione" loading="lazy" />
         </div>
         <div className={styles.orario}>
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
