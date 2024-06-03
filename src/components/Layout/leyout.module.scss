@@ -107,6 +107,31 @@
       }
     }
   }
+  .loadMoreBtn {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #434343;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+  
   @media (min-width: 800px) {
     .articles {
       .article {

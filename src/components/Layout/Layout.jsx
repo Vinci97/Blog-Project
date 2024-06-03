@@ -9,13 +9,14 @@ import Link from "next/link";
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
   const [articles, setArticles] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(5);
 
   useEffect(() => {
     const fetchArticles = async () => {
       try {
         const response = await fetch('/articoli.json');
         const data = await response.json();
-        const sortedArticles = data.sort((a, b) => b.id - a.id).slice(0, 5);
+        const sortedArticles = data.sort((a, b) => b.id - a.id);
         setArticles(sortedArticles);
       } catch (error) {
         console.error('Error fetching articles:', error);
@@ -27,6 +28,10 @@ const Layout = () => {
 
   const toggleMenu = () => {
     setMenuAperto(prevMenuAperto => !prevMenuAperto);
+  };
+
+  const loadMoreArticles = () => {
+    setVisibleCount(prevCount => prevCount + 5);
   };
 
   return (
@@ -43,7 +48,7 @@ const Layout = () => {
           </div>
           <h1 className={styles.titolo}>POST RECENTI</h1>
         </div>
-        {articles.map(article => (
+        {articles.slice(0, visibleCount).map(article => (
           <Link href={`/article/${article.id}-${article.slug}`} key={article.id}>
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
@@ -53,6 +58,9 @@ const Layout = () => {
             </div>
           </Link>
         ))}
+        {visibleCount < articles.length && (
+          <button onClick={loadMoreArticles} className={styles.loadMoreBtn}>Altri Articoli</button>
+        )}
       </div>
       <Footer />
     </div>
