@@ -19,6 +19,7 @@ const Criticainternazionale = ()=> {
                 <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/ico/Michele.ico" />
+                <meta name="google-site-verification" content="ePCHNw-cLEJubwrCWJboS0uLoc3LlfzXCXAi0nzLEzQ" />
             </Head>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
@@ -27,6 +28,7 @@ const Criticainternazionale = ()=> {
             <div className={styles.ContTitolo}>
                <div className={styles.line1}>
                 <div className={styles.line2}></div></div> <h1 className={styles.titolo}>Critica Internazionale</h1>
+                
             </div>
             <ArticlesByCategory category="criticainternazionale" />
             </div>
