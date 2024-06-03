@@ -12,6 +12,11 @@ import fs from 'fs';
 import path from 'path';
 import remarkGfm from 'remark-gfm';
 
+// Funzione per sanitizzare i nomi dei file
+const sanitizeFilename = (filename) => {
+  return filename.replace(/[^\w\s.-]/gi, '').replace(/\s+/g, '-');
+};
+
 const ArticlePage = ({ article }) => {
   const router = useRouter();
   const [menuAperto, setMenuAperto] = useState(false);
@@ -36,7 +41,7 @@ const ArticlePage = ({ article }) => {
   return (
     <div className={styles.article}>
       <Head>
-        <title>MicheleVacca.it</title>
+        <title>{article.titolo} - MicheleVacca.it</title>
         <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/ico/Michele.ico" />
@@ -74,7 +79,7 @@ export async function getStaticPaths() {
   const articles = JSON.parse(jsonData);
 
   const paths = articles.map((article) => ({
-    params: { id: `${article.id}-${article.slug}` },
+    params: { id: `${article.id}-${sanitizeFilename(article.slug)}` },
   }));
 
   return { paths, fallback: true };
@@ -92,3 +97,4 @@ export async function getStaticProps({ params }) {
 }
 
 export default ArticlePage;
+

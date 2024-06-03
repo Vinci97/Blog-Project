@@ -5,7 +5,7 @@
   "scripts": {
     "type": "module",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap"
