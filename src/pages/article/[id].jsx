@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './article.module.scss';
 import Header from '@/components/header';
 import Hero from '@/components/Hero';
@@ -28,6 +28,10 @@ const ArticlePage = ({ article }) => {
     return <p>Loading...</p>;
   }
 
+  if (!article) {
+    return <p>Article not found.</p>;
+  }
+
   const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => {
     const isHeading = paragrafo.trim().startsWith('# ');
     const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
@@ -48,9 +52,9 @@ const ArticlePage = ({ article }) => {
         <meta name="google-site-verification" content="ePCHNw-cLEJubwrCWJboS0uLoc3LlfzXCXAi0nzLEzQ" />
         <meta name="robots" content="index, follow" />
       </Head>
-      <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
-      <Hero toggleMenu={toggleMenu}/>
-      <Navbar/>
+      <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
+      <Hero toggleMenu={toggleMenu} />
+      <Navbar />
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
         <img src={article.img} alt={article.titolo} />
@@ -62,15 +66,15 @@ const ArticlePage = ({ article }) => {
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
         </div>
         <div className={styles.social}>
-          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1" target="_blank" rel="noopener noreferrer"/>
-          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34}} url="https://www.youtube.com/channel/UC_a5LsGJWmwSCDoV0SbD9AQ" target="_blank" rel="noopener noreferrer"/>
-          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D" target="_blank" rel="noopener noreferrer"/>
-          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34}} url="https://www.facebook.com/profile.php?id=100063728582740" target="_blank" rel="noopener noreferrer"/>
+          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.youtube.com/channel/UC_a5LsGJWmwSCDoV0SbD9AQ" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.facebook.com/profile.php?id=100063728582740" target="_blank" rel="noopener noreferrer" />
         </div>
-        <br/>
+        <br />
         <div>{contenutoParagrafi}</div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -95,8 +99,17 @@ export async function getStaticProps({ params }) {
   const [id] = params.id.split('-');
   const article = articles.find((article) => article.id.toString() === id);
 
-  return { props: { article } };
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { article },
+  };
 }
 
 export default ArticlePage;
+
 
