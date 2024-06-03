@@ -15,7 +15,7 @@ const Controinformazione = ()=> {
     return(
         <div className={styles.Controinformazione}>
             <Head>
-                <title>{article.titolo} - MicheleVacca.it</title>
+                <title> MicheleVacca.it</title>
                 <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/ico/Michele.ico" />
