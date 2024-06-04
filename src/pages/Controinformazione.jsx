@@ -15,12 +15,29 @@ const Controinformazione = ()=> {
     return(
         <div className={styles.Controinformazione}>
             <Head>
-                <title> MicheleVacca.it</title>
+                <title>MicheleVacca.it</title>
                 <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/ico/Michele.ico" />
-                <meta name="google-site-verification" content="ePCHNw-cLEJubwrCWJboS0uLoc3LlfzXCXAi0nzLEzQ" />
                 <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="MicheleVacca.it" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.il-blog-di-michele-vacca.it" />
+                <meta property="og:image" content="/ico/Michele.ico" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="MicheleVacca.it" />
+                <meta name="twitter:image" content="/ico/Michele.ico" />
+                <script type="application/ld+json">
+                  {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "Organization",
+                      "url": "https://www.il-blog-di-michele-vacca.it",
+                      "logo": "/ico/Michele.ico",
+                      "name": "MicheleVacca.it"
+                    }
+                  `}
+                </script>
             </Head>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <Hero toggleMenu={toggleMenu}/>
