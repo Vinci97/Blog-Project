@@ -28,7 +28,12 @@ export default function Home() {
               "@type": "Organization",
               "url": "https://www.il-blog-di-michele-vacca.it",
               "logo": "/ico/Michele.ico",
-              "name": "MicheleVacca.it"
+              "name": "MicheleVacca.it",
+              "sameAs": [
+                "https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1",
+                "https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D",
+                "https://www.facebook.com/profile.php?id=100063728582740"
+              ]
             }
           `}
         </script>

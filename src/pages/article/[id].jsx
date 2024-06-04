@@ -32,7 +32,7 @@ const ArticlePage = ({ article }) => {
     return <p>Article not found.</p>;
   }
 
-  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => {
+  const contenutoParagrafi = article.contenuto.split('\n\n').map((paragrafo, index) => {
     const isHeading = paragrafo.trim().startsWith('# ');
     const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
     return (
@@ -45,26 +45,44 @@ const ArticlePage = ({ article }) => {
   return (
     <div className={styles.article}>
       <Head>
-        <title>MicheleVacca.it</title>
-        <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
+        <title>{article.titolo} - MicheleVacca.it</title>
+        <meta name="description" content={article.contenuto.substring(0, 150)} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/ico/Michele.ico" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="MicheleVacca.it" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.il-blog-di-michele-vacca.it" />
-        <meta property="og:image" content="/ico/Michele.ico" />
+        <meta property="og:title" content={article.titolo} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://www.il-blog-di-michele-vacca.it/article/${article.id}-${sanitizeFilename(article.slug)}`} />
+        <meta property="og:image" content={article.img} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MicheleVacca.it" />
-        <meta name="twitter:image" content="/ico/Michele.ico" />
+        <meta name="twitter:title" content={article.titolo} />
+        <meta name="twitter:image" content={article.img} />
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "https://www.il-blog-di-michele-vacca.it",
-              "logo": "/ico/Michele.ico",
-              "name": "MicheleVacca.it"
+              "@type": "Article",
+              "headline": "${article.titolo}",
+              "image": "${article.img}",
+              "author": {
+                "@type": "Person",
+                "name": "${article.autore}"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "MicheleVacca.it",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "/ico/Michele.ico"
+                },
+                "sameAs": [
+                  "https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1",
+                  "https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D",
+                  "https://www.facebook.com/profile.php?id=100063728582740"
+                ]
+              },
+              "datePublished": "${article.date}",
+              "description": "${article.contenuto.substring(0, 150)}"
             }
           `}
         </script>
@@ -74,7 +92,7 @@ const ArticlePage = ({ article }) => {
       <Navbar />
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
-        <img src={article.img} alt={article.titolo} />
+        <img src={article.img} alt={article.titolo} title={article.titolo} loading="lazy" />
         <div className={styles.line}>
           <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
           <img className={styles.Michele} src="/pics/Michele.png" alt="Michele blog io politica informazione" loading="lazy" />
@@ -83,10 +101,10 @@ const ArticlePage = ({ article }) => {
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
         </div>
         <div className={styles.social}>
-          <SocialIcon className={styles.icon} network="tiktok" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1" target="_blank" rel="noopener noreferrer" />
-          <SocialIcon className={styles.icon} network="youtube" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.youtube.com/channel/UC_a5LsGJWmwSCDoV0SbD9AQ" target="_blank" rel="noopener noreferrer" />
-          <SocialIcon className={styles.icon} network="instagram" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D" target="_blank" rel="noopener noreferrer" />
-          <SocialIcon className={styles.icon} network="facebook" bgColor="rgba(9, 9, 9, 9)" style={{ height: 34, width: 34 }} url="https://www.facebook.com/profile.php?id=100063728582740" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="tiktok" bgColor="#000000" style={{ height: 34, width: 34 }} url="https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="youtube" bgColor="#000000" style={{ height: 34, width: 34 }} url="https://www.youtube.com/channel/UC_a5LsGJWmwSCDoV0SbD9AQ" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="instagram" bgColor="#000000" style={{ height: 34, width: 34 }} url="https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D" target="_blank" rel="noopener noreferrer" />
+          <SocialIcon className={styles.icon} network="facebook" bgColor="#000000" style={{ height: 34, width: 34 }} url="https://www.facebook.com/profile.php?id=100063728582740" target="_blank" rel="noopener noreferrer" />
         </div>
         <br />
         <div>{contenutoParagrafi}</div>
@@ -128,5 +146,3 @@ export async function getStaticProps({ params }) {
 }
 
 export default ArticlePage;
-
-
