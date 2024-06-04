@@ -32,7 +32,7 @@ const ArticlePage = ({ article }) => {
     return <p>Article not found.</p>;
   }
 
-  const contenutoParagrafi = article.contenuto.split('\n\n').map((paragrafo, index) => {
+  const contenutoParagrafi = article.contenuto.split('/n/n').map((paragrafo, index) => {
     const isHeading = paragrafo.trim().startsWith('# ');
     const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
     return (
