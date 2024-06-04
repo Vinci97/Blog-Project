@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Layout from '@/components/Layout'
+import Head from 'next/head';
+import { Inter } from 'next/font/google';
+import styles from '@/styles/Home.module.css';
+import Layout from '@/components/Layout';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -21,26 +21,24 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="MicheleVacca.it" />
         <meta name="twitter:image" content="/ico/Michele.ico" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "https://www.il-blog-di-michele-vacca.it",
-              "logo": "/ico/Michele.ico",
-              "name": "MicheleVacca.it",
-              "sameAs": [
-                "https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1",
-                "https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D",
-                "https://www.facebook.com/profile.php?id=100063728582740"
-              ]
-            }
-          `}
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.il-blog-di-michele-vacca.it",
+            "logo": "/ico/Michele.ico",
+            "name": "MicheleVacca.it",
+            "sameAs": [
+              "https://www.tiktok.com/@michele.vacca.blog?_t=8mrJ15DgGkS&_r=1",
+              "https://www.instagram.com/blogdimichelevacca/?igsh=MXBiMHh4NnB2NGtubQ%3D%3D",
+              "https://www.facebook.com/profile.php?id=100063728582740"
+            ]
+          }
+        `}} />
       </Head>
       <main className={styles.main}>
         <Layout />
       </main>
     </>
-  )
+  );
 }
