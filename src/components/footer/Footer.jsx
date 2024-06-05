@@ -26,7 +26,7 @@ const Footer = () => {
                     <h3>CONTATTI</h3>
                 </div>
                 <div className={styles.footerContatti}>
-                    <a href="mailto:postmaster@il-blog-di-michele-vacca.it">@il-blog-di-michele-vacca.it</a>
+                    <a href="mailto:postmaster@il-blog-di-michele-vacca.it">postmaster@il-blog-di-michele-vacca.it</a>
                 </div>
             </div>
             <div className={styles.container2}>
