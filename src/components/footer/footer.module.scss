@@ -1,55 +1,76 @@
 .Footer {
-    height: 95px;
+    height: 100px;
     width: 100%;
+    padding: 4px;
     display: flex;
     justify-content: center;
     font-size: 0.8rem;
     background: rgb(0, 0, 0);
     font-family: 'Libre Baskerville', serif;
-   
-
-    h3 {
-        color: #bfa119;
-    }
-
-    .footerSocial, .footerContatti {
-        width: 50%;
+    .container1,.container2{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-
-        .footerTxtContatti {
-            color: white;
+        height: 100%;
+        width: 100%;
+        .titoli{
             display: flex;
-            justify-content: center;
             align-items: center;
-            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 30%;
+            
+            h3 {
+                color: #bfa119;
+            }
         }
+        .footerSocial, .footerContatti {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            a{
+                color: white;
+                font-size: 0.6rem;
+            }
+        }
+        .footerSocial{
+            flex-direction: row;
+            
+        }
+      
     }
 
-    // Media query per tablet
     @media (min-width: 768px) {
         font-size: 0.9rem;
-        .footerSocial, .footerContatti {
-            gap: 15px;
+        .container1,.container2{
+            .footerSocial, .footerContatti {
+                
+                a{
+                    font-size: 0.9rem;
+                }
+                
+            }
+            .footerContatti{
+                gap: 5px;
+            }
+          
         }
     }
 
-    // Media query per desktop
     @media (min-width: 1024px) {
         height: 150px;
-        flex-direction: row; // Cambia il layout in orizzontale per desktop
+        flex-direction: row;
         font-size: 1.5rem;
-
-        .footerSocial, .footerContatti {
-            width: 40%; // Riduci la larghezza per dare più spazio al contenuto
-            gap: 20px;
-
-            .footerTxtContatti {
-                flex-direction: row; // Visualizza il testo in riga per un layout più compatto
-                gap: 10px; // Aggiungi spazio tra gli elementi
+        .container1,.container2{
+            .footerSocial, .footerContatti {
+                a{
+                    font-size: 1.5rem;
+                }
             }
         }
     }
