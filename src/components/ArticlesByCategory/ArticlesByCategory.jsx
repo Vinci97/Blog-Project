@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import styles from "./ArticlesByCategory.module.scss"
+import styles from "./ArticlesByCategory.module.scss";
 import Link from 'next/link';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const ArticlesByCategory = ({ category }) => {
   const [articles, setArticles] = useState([]);
@@ -34,7 +36,9 @@ const ArticlesByCategory = ({ category }) => {
           <div className={styles.article}>
             <h3>{article.titolo}</h3>
             <img src={article.img} alt={article.titolo} loading="lazy"/>
-            <p>{article.contenuto.split(" ").slice(0, 20).join(" ")}...</p>
+            <Markdown className={styles.paragrafo} remarkPlugins={[remarkGfm]}>
+              {article.contenuto.split(" ").slice(0, 20).join(" ") + '...'}
+            </Markdown>
             <div className={styles.readMore}>Continua a leggere</div>
           </div>
         </Link>

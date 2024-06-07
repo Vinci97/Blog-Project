@@ -5,6 +5,8 @@ import Header from "../header";
 import styles from "./leyout.module.scss";
 import Navbar from "../navbar";
 import Link from "next/link";
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
@@ -53,7 +55,9 @@ const Layout = () => {
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />
-              <p>{article.contenuto.split(" ").slice(0, 10).join(" ")}...</p>
+              <Markdown className={styles.paragrafo} remarkPlugins={[remarkGfm]}>
+                {article.contenuto.split(" ").slice(0, 10).join(" ") + '...'}
+              </Markdown>
               <div className={styles.readMore}>Continua a leggere</div>
             </div>
           </Link>
