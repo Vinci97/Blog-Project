@@ -56,7 +56,7 @@ const Layout = () => {
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />
               <Markdown className={styles.paragrafo} remarkPlugins={[remarkGfm]}>
-                {article.contenuto.split(" ").slice(0, 10).join(" ") + '...'}
+                {article.contenuto.split(" ").slice(0, 25).join(" ") + '...'}
               </Markdown>
               <div className={styles.readMore}>Continua a leggere</div>
             </div>
