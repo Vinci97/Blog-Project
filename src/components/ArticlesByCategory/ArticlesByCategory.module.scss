@@ -1,4 +1,12 @@
 .articles {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+  padding-bottom: 5px;
   .article {
       color: black;
       display: flex;
