@@ -17,13 +17,25 @@ const ArticlesByCategory = ({ category }) => {
         setArticles(filteredArticles);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching articles:', error);
+        console.error('Errore nel recupero degli articoli:', error);
         setLoading(false);
       }
     };
 
     fetchArticles();
   }, [category]);
+
+  const renderContent = (content) => {
+    return content.split('/n/n').map((paragrafo, index) => {
+      const isHeading = paragrafo.trim().startsWith('# ');
+      const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
+      return (
+        <Markdown key={index} className={markdownClass} remarkPlugins={[remarkGfm]}>
+          {paragrafo}
+        </Markdown>
+      );
+    });
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -36,9 +48,9 @@ const ArticlesByCategory = ({ category }) => {
           <div className={styles.article}>
             <h3>{article.titolo}</h3>
             <img src={article.img} alt={article.titolo} loading="lazy"/>
-            <Markdown className={styles.paragrafo} remarkPlugins={[remarkGfm]}>
-              {article.contenuto.split(" ").slice(0, 20).join(" ") + '...'}
-            </Markdown>
+            <div className={styles.paragrafo}>
+              {renderContent(article.contenuto.split(" ").slice(0, 20).join(" ") + '...')}
+            </div>
             <div className={styles.readMore}>Continua a leggere</div>
           </div>
         </Link>
@@ -48,3 +60,4 @@ const ArticlesByCategory = ({ category }) => {
 };
 
 export default ArticlesByCategory;
+

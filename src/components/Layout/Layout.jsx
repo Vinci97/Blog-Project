@@ -21,7 +21,7 @@ const Layout = () => {
         const sortedArticles = data.sort((a, b) => b.id - a.id);
         setArticles(sortedArticles);
       } catch (error) {
-        console.error('Error fetching articles:', error);
+        console.error('Errore nel recupero degli articoli:', error);
       }
     };
 
@@ -34,6 +34,18 @@ const Layout = () => {
 
   const loadMoreArticles = () => {
     setVisibleCount(prevCount => prevCount + 5);
+  };
+
+  const renderContent = (content) => {
+    return content.split('/n/n').map((paragrafo, index) => {
+      const isHeading = paragrafo.trim().startsWith('# ');
+      const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
+      return (
+        <Markdown key={index} className={markdownClass} remarkPlugins={[remarkGfm]}>
+          {paragrafo}
+        </Markdown>
+      );
+    });
   };
 
   return (
@@ -55,9 +67,9 @@ const Layout = () => {
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />
-              <Markdown className={styles.paragrafo} remarkPlugins={[remarkGfm]}>
-                {article.contenuto.split(" ").slice(0, 25).join(" ") + '...'}
-              </Markdown>
+              <div className={styles.paragrafo}>
+                {renderContent(article.contenuto.split(" ").slice(0, 25).join(" ") + '...')}
+              </div>
               <div className={styles.readMore}>Continua a leggere</div>
             </div>
           </Link>
@@ -72,3 +84,4 @@ const Layout = () => {
 };
 
 export default Layout;
+
