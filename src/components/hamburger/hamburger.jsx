@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./hamburger.module.scss"
 
-const hamburger = () => {
+const Hamburger = () => {
   return (
     <div className={styles.hamburger}>
       <Link href="/" className={styles.argomento}>HOME</Link>
@@ -14,4 +14,4 @@ const hamburger = () => {
   );
 };
 
-export default hamburger;
+export default Hamburger;
