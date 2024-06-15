@@ -50,9 +50,9 @@ const Layout = () => {
 
   return (
     <div className={styles.layout}>
-      <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
-      <Hamburger toggleMenu={toggleMenu} />
-      <Navbar />
+      <Header toggleMenu={toggleMenu}/>
+      <Hamburger />
+      <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
       <div className={styles.articles}>
         <div className={styles.ContTitolo}>
           <div className={styles.freccia}>

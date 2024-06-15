@@ -87,9 +87,9 @@ const ArticlePage = ({ article }) => {
           `}
         </script>
       </Head>
-      <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
-      <Hamburger toggleMenu={toggleMenu} />
-      <Navbar />
+      <Header toggleMenu={toggleMenu}/>
+      <Hamburger />
+      <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
         <img src={article.img} alt={article.titolo} title={article.titolo} loading="lazy" />
