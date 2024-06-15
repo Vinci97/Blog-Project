@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from './article.module.scss';
-import Header from '@/components/navbar';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/hamburger';
-import Footer from '@/components/footer';
+import Header from '@/components/Navbar';
+import Hero from '@/components/Header';
+import Navbar from '@/components/Hamburger';
+import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import { SocialIcon } from 'react-social-icons';
 import Head from 'next/head';

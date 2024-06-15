@@ -1,9 +1,9 @@
-import Hero from "@/components/Hero"
-import Footer from "@/components/footer"
-import Header from "@/components/navbar"
+import Hero from "@/components/Header"
+import Footer from "@/components/Footer"
+import Header from "@/components/Navbar"
 import { useState } from "react"
 import styles from "../styles/OpenDiritto.module.scss"
-import Navbar from "@/components/hamburger"
+import Navbar from "@/components/Hamburger"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
 

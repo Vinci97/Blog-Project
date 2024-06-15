@@ -1,7 +1,7 @@
-import styles from "./hero.module.scss"
+import styles from "./header.module.scss"
 const Hero = ({ toggleMenu })=> {
     return(
-        <div className={styles.hero}>
+        <div className={styles.header}>
             <button className={styles.hamburger} onClick={toggleMenu}>
                 <div></div>
                 <div></div>

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Hero from "../Hero";
-import Footer from "../footer";
-import Header from "../navbar";
+import Hero from "../Header";
+import Footer from "../Footer";
+import Header from "../Navbar";
 import styles from "./leyout.module.scss";
-import Navbar from "../hamburger";
+import Navbar from "../Hamburger";
 import Link from "next/link";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
