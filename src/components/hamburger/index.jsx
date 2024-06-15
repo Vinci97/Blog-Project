@@ -1,3 +1,3 @@
-import Hamburger from "./hamburger";
-export default Hamburger
+import hamburger from "./hamburger";
+export default hamburger
 
