@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
 import styles from "./leyout.module.scss";
-import Hamburger from "../Hamburger";
 import Link from "next/link";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Header from "../Header";
+import Hamburger from "../Hamburger";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);

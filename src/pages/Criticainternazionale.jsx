@@ -1,11 +1,11 @@
-import Header from "@/components/Header"
 import styles from "../styles/Criticainternazionale.module.scss"
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
 import {  useState } from "react"
-import Hamburger from "@/components/Hamburger"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
+import Header from "@/components/Header"
+import Hamburger from "@/components/Hamburger"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const Criticainternazionale = () => {
     const [menuAperto, setMenuAperto] = useState(false);

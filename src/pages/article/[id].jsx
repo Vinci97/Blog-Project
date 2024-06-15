@@ -1,16 +1,16 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from './article.module.scss';
-import Navbar from '@/components/Navbar';
-import Header from '@/components/Header';
-import Hamburger from '@/components/Hamburger';
-import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import { SocialIcon } from 'react-social-icons';
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import remarkGfm from 'remark-gfm';
+import Header from '@/components/Header';
+import Hamburger from '@/components/Hamburger';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 // Funzione per sanitizzare i nomi dei file
 const sanitizeFilename = (filename) => {

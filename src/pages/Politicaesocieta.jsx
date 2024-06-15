@@ -1,11 +1,11 @@
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import Navbar from "@/components/Navbar"
 import { useState } from "react"
 import styles from "../styles/Politicaesocieta.module.scss"
-import Hamburger from "@/components/Hamburger"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
+import Header from "@/components/Header"
+import Hamburger from "@/components/Hamburger"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 const Politicaesocieta = () => {
     const [menuAperto, setMenuAperto] = useState(false);
