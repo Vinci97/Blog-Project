@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Hero from "../Header";
+import Header from "../Header";
 import Footer from "../Footer";
-import Header from "../Navbar";
+import Navbar from "../Navbar";
 import styles from "./leyout.module.scss";
-import Navbar from "../Hamburger";
+import Hamburger from "../Hamburger";
 import Link from "next/link";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -51,7 +51,7 @@ const Layout = () => {
   return (
     <div className={styles.layout}>
       <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
-      <Hero toggleMenu={toggleMenu} />
+      <Hamburger toggleMenu={toggleMenu} />
       <Navbar />
       <div className={styles.articles}>
         <div className={styles.ContTitolo}>

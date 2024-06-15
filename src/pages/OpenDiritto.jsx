@@ -1,9 +1,9 @@
-import Hero from "@/components/Header"
+import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Header from "@/components/Navbar"
+import Navbar from "@/components/Navbar"
 import { useState } from "react"
 import styles from "../styles/OpenDiritto.module.scss"
-import Navbar from "@/components/Hamburger"
+import Hamburger from "@/components/Hamburger"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
 
@@ -47,7 +47,7 @@ const OpenDiritto = () => {
                 </script>
             </Head>
             <Header isOpen={menuAperto} toggleMenu={toggleMenu}/>
-            <Hero toggleMenu={toggleMenu}/>
+            <Hamburger toggleMenu={toggleMenu}/>
             <Navbar/>
             <div className={styles.container}>
                 <div className={styles.ContTitolo}>
