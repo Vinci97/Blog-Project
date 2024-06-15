@@ -5,7 +5,6 @@ import Head from "next/head"
 import Header from "@/components/Header";
 import Hamburger from "@/components/Hamburger";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const ComeFare = () => {
     const [menuAperto, setMenuAperto] = useState(false);
@@ -46,9 +45,9 @@ const ComeFare = () => {
                   `}
                 </script>
             </Head>
-            <Header toggleMenu={toggleMenu}/>
-            <Hamburger />
-            <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
+            <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
+            <Hamburger toggleMenu={toggleMenu} />
+            <Navbar />
             <div className={styles.container}>
                 <div className={styles.ContTitolo}>
                     <div className={styles.line1}><div className={styles.line2}></div></div>
