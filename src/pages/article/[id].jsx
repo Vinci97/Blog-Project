@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from './article.module.scss';
-import Header from '@/components/Navbar';
-import Hero from '@/components/Header';
-import Navbar from '@/components/Hamburger';
+import Navbar from '@/components/Navbar';
+import Header from '@/components/Header';
+import Hamburger from '@/components/Hamburger';
 import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import { SocialIcon } from 'react-social-icons';
@@ -88,7 +88,7 @@ const ArticlePage = ({ article }) => {
         </script>
       </Head>
       <Header isOpen={menuAperto} toggleMenu={toggleMenu} />
-      <Hero toggleMenu={toggleMenu} />
+      <Hamburger toggleMenu={toggleMenu} />
       <Navbar />
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>

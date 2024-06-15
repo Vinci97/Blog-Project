@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 
-const navbar = ({ isOpen, toggleMenu }) => {
+const Navbar = ({ isOpen, toggleMenu }) => {
   const menuStyle = {
     position: 'fixed',
     left: isOpen ? '0' : '-120%',
@@ -25,4 +25,4 @@ const navbar = ({ isOpen, toggleMenu }) => {
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -1,5 +1,5 @@
 import styles from "./header.module.scss"
-const Hero = ({ toggleMenu })=> {
+const Header = ({ toggleMenu })=> {
     return(
         <div className={styles.header}>
             <button className={styles.hamburger} onClick={toggleMenu}>
@@ -16,4 +16,4 @@ const Hero = ({ toggleMenu })=> {
         </div>
     )
 }
-export default Hero
+export default Header
