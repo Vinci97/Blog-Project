@@ -1,17 +1,86 @@
-.navbar{
-    display: none;
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
-    @media (min-width: 800px) {
+.navbar {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: -120%;
+    z-index: 3;
+    font-family: 'Libre Baskerville', serif;
+    padding-top: 25vh;
+    .NavHam{
+        height: 20vh;
         width: 100%;
-        height: 30px;
-        margin: 0;
-        font-size: 1.3rem;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background: rgb(0, 0, 0);
-        display: flex;
-        padding-bottom: 10px;
+        justify-content: space-between;
+        padding: 20px;
+        align-items:center;
+        position: absolute;
+        top: 0;
+        .titleHam{
+            color: aliceblue;
+            font-size: 1.6rem;
+            color: #bfa119;
+        }
+        .close {
+            height: 25px;
+            width: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0);
+            border: 0;
+            border-radius: 50px;
+            font-size: 1rem;
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+            
+            &:before, &:after {
+              content: '';
+              position: absolute;
+              height: 3px;
+              width: 100%;
+              background: #bfa119;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+            
+            &:before {
+              transform: rotate(45deg);
+            }
+            
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
     }
+    .argomento{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(85, 85, 85, 0);
+        color: #e3e3e3;
+        border: 0;
+        border-radius: 25px;
+        height: 6%;
+        font-size: 1.1rem;
+        font-family: 'Libre Baskerville', serif;
+        .argSpan{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+    @media (min-width: 800px) {
+      display: none;
+  }
+
 }

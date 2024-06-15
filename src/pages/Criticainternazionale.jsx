@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero"
 import styles from "../styles/Criticainternazionale.module.scss"
 import Footer from "@/components/footer"
-import Header from "@/components/header"
+import Header from "@/components/navbar"
 import {  useState } from "react"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/hamburger"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
 

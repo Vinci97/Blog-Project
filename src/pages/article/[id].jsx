@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from './article.module.scss';
-import Header from '@/components/header';
+import Header from '@/components/navbar';
 import Hero from '@/components/Hero';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/hamburger';
 import Footer from '@/components/footer';
 import Markdown from 'react-markdown';
 import { SocialIcon } from 'react-social-icons';

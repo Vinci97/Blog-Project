@@ -1,0 +1,17 @@
+.hamburger{
+    display: none;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    @media (min-width: 800px) {
+        width: 100%;
+        height: 30px;
+        margin: 0;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgb(0, 0, 0);
+        display: flex;
+        padding-bottom: 10px;
+    }
+}
