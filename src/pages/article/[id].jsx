@@ -7,10 +7,10 @@ import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import remarkGfm from 'remark-gfm';
-import Header from '@/components/Header';
-import Hamburger from '@/components/Hamburger';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Header from '@/components/header';
+import Hamburger from '@/components/hamburger';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 // Funzione per sanitizzare i nomi dei file
 const sanitizeFilename = (filename) => {
