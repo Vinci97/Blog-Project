@@ -10,6 +10,13 @@
     justify-content: center;
     margin: 10px;
     padding-bottom:50px ;
+    a {
+      color: blue;
+    }
+    
+     a:hover {
+      color: darkblue; 
+    } 
     .titolo{
       text-align:center;
       margin-bottom: 5px;
@@ -94,12 +101,10 @@
     .contenuto{
        a {
         color: blue;
-        text-decoration: underline; 
       }
       
        a:hover {
         color: darkblue; 
-        text-decoration: none; 
       } 
       display: flex;
       flex-direction: column;
