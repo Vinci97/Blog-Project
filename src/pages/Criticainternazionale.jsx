@@ -2,9 +2,9 @@ import styles from "../styles/Criticainternazionale.module.scss"
 import {  useState } from "react"
 import ArticlesByCategory from "@/components/ArticlesByCategory"
 import Head from "next/head"
-import Header from "@/components/header"
-import Hamburger from "@/components/hamburger"
-import Navbar from "@/components/navbar"
+import Header from "@/components/Header"
+import Hamburger from "@/components/Hamburger"
+import Navbar from "@/components/Navbar"
 import Footer from "@/components/footer"
 
 const Criticainternazionale = () => {
