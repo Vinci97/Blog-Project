@@ -1,6 +1,7 @@
-import styles from "./header.module.scss"
-const Header = ({ toggleMenu })=> {
-    return(
+import styles from "./header.module.scss";
+
+const Header = ({ toggleMenu }) => {
+    return (
         <div className={styles.header}>
             <button className={styles.hamburger} onClick={toggleMenu}>
                 <div></div>
@@ -8,12 +9,13 @@ const Header = ({ toggleMenu })=> {
                 <div></div>
             </button>
             <h3 className={styles.blog}>
-            il Blog di
+                il Blog di
             </h3>
             <h1 className={styles.logo}>
                 Michele Vacca
             </h1>
         </div>
-    )
-}
-export default Header
+    );
+};
+
+export default Header;
