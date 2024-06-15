@@ -46,8 +46,8 @@ const ComeFare = () => {
                   `}
                 </script>
             </Head>
-            <Header />
-            <Hamburger toggleMenu={toggleMenu} />
+            <Header toggleMenu={toggleMenu}/>
+            <Hamburger />
             <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
             <div className={styles.container}>
                 <div className={styles.ContTitolo}>
