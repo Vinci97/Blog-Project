@@ -7,11 +7,7 @@ const Footer = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
-                setIconSize(50);
-            } else {
-                setIconSize(34);
-            }
+            window.innerWidth >= 768 ? setIconSize(50) : setIconSize(34); 
         };
 
         window.addEventListener('resize', handleResize);
