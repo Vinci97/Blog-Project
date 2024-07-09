@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from "../styles/ComeFare.module.scss"
+import styles from "../styles/aSpadaTratta.module.scss"
 import ArticlesByCategory from "@/components/ArticlesByCategory";
 import Head from "next/head"
 import Header from "@/components/Header";
@@ -7,7 +7,7 @@ import Hamburger from "@/components/hamburger";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const ComeFare = () => {
+const aSpadaTratta = () => {
     const [menuAperto, setMenuAperto] = useState(false);
 
     const toggleMenu = () => {
@@ -15,9 +15,9 @@ const ComeFare = () => {
     };
 
     return (
-        <div className={styles.ComeFare}>
+        <div className={styles.aSpadaTratta}>
             <Head>
-                <title>Come Fare - Michele Vacca</title>
+                <title>A SPADA TRATTA - Michele Vacca</title>
                 <meta name="description" content="Politica e attualità dal punto di vista di un libero studente" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/ico/Michele.ico" />
@@ -52,13 +52,13 @@ const ComeFare = () => {
             <div className={styles.container}>
                 <div className={styles.ContTitolo}>
                     <div className={styles.line1}><div className={styles.line2}></div></div>
-                    <h1 className={styles.titolo}>Come Fare...?</h1>
+                    <h1 className={styles.titolo}>A SPADA TRATTA</h1>
                 </div>
-                <ArticlesByCategory category="comefare" />
+                <ArticlesByCategory category="aSpadaTratta" />
             </div>
             <Footer />
         </div>
     )
 }
 
-export default ComeFare
+export default aSpadaTratta
