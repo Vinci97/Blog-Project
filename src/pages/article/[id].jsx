@@ -92,10 +92,10 @@ const ArticlePage = ({ article }) => {
       <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
-        <img src={article.img} alt={article.titolo} title={article.titolo} loading="lazy" />
+        <img src={article.img} alt={article.titolo} title={article.titolo}/>
         <div className={styles.line}>
           <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
-          <img className={styles.Michele} src={article.imgAut} alt={article.titolo} title={article.titolo} loading="lazy" />
+          <img className={styles.Michele} src={article.imgAut} alt={article.titolo} title={article.titolo}/>
         </div>
         <div className={styles.orario}>
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
