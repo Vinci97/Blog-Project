@@ -9,7 +9,7 @@ const Header = ({ toggleMenu }) => {
                 <div></div>
             </button>
             <h3 className={styles.blog}>
-            <a href="/">il Blog di</a>
+                <a href="/">il Blog di</a>
             </h3>
             <h1 className={styles.logo}>
                 <a href="/">Michele Vacca</a>
