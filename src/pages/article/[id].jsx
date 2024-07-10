@@ -13,8 +13,8 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import LazyImage from '@/components/LazyImage/LazyImage';
 import { prefetchImages } from '@/utils/prefetchImages';
+import LoadingSpinner from '@/components/LoadingSpinner/LoadingSpinner';
 
-// Funzione per sanitizzare i nomi dei file
 const sanitizeFilename = (filename) => {
   return filename.replace(/[^\w\s.-]/gi, '').replace(/\s+/g, '-');
 };
@@ -33,7 +33,7 @@ const ArticlePage = ({ article }) => {
   }, [article]);
 
   if (router.isFallback) {
-    return <p>Loading...</p>;
+    return <LoadingSpinner />;
   }
 
   if (!article) {

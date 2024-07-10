@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./layout.module.scss";
 import Link from "next/link";
 import Markdown from 'react-markdown';
@@ -9,11 +9,13 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import LazyImage from "../LazyImage/LazyImage";
 import { prefetchImages } from "../../utils/prefetchImages";
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
   const [articles, setArticles] = useState([]);
   const [visibleCount, setVisibleCount] = useState(5);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -25,8 +27,11 @@ const Layout = () => {
 
         const imageUrls = data.map(article => article.img);
         prefetchImages(imageUrls);
+        
+        setLoading(false);
       } catch (error) {
         console.error('Errore nel recupero degli articoli:', error);
+        setLoading(false);
       }
     };
 
@@ -52,6 +57,10 @@ const Layout = () => {
       );
     });
   };
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className={styles.layout}>
@@ -89,5 +98,6 @@ const Layout = () => {
 };
 
 export default Layout;
+
 
 
