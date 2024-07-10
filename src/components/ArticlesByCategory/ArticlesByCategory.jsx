@@ -5,6 +5,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import LazyImage from "../LazyImage/LazyImage";
 import { prefetchImages } from "../../utils/prefetchImages";
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const ArticlesByCategory = ({ category }) => {
   const [articles, setArticles] = useState([]);
@@ -44,7 +45,7 @@ const ArticlesByCategory = ({ category }) => {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <LoadingSpinner />;
   }
 
   return (
@@ -66,5 +67,6 @@ const ArticlesByCategory = ({ category }) => {
 };
 
 export default ArticlesByCategory;
+
 
 
