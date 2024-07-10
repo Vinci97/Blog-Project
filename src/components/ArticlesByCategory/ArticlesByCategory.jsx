@@ -3,6 +3,8 @@ import styles from "./ArticlesByCategory.module.scss";
 import Link from 'next/link';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import LazyImage from "../LazyImage/LazyImage";
+import { prefetchImages } from "../../utils/prefetchImages";
 
 const ArticlesByCategory = ({ category }) => {
   const [articles, setArticles] = useState([]);
@@ -15,6 +17,10 @@ const ArticlesByCategory = ({ category }) => {
         const data = await response.json();
         const filteredArticles = data.filter(article => article.category === category).sort((a, b) => b.id - a.id);
         setArticles(filteredArticles);
+
+        const imageUrls = filteredArticles.map(article => article.img);
+        prefetchImages(imageUrls);
+        
         setLoading(false);
       } catch (error) {
         console.error('Errore nel recupero degli articoli:', error);
@@ -47,7 +53,7 @@ const ArticlesByCategory = ({ category }) => {
         <Link key={article.id} href={`/article/${article.id}-${article.slug}`} passHref>
           <div className={styles.article}>
             <h3>{article.titolo}</h3>
-            <img src={article.img} alt={article.titolo} loading="lazy"/>
+            <LazyImage src={article.img} alt={article.titolo} />
             <div className={styles.paragrafo}>
               {renderContent(article.contenuto.split(" ").slice(0, 20).join(" ") + '...')}
             </div>
@@ -60,4 +66,5 @@ const ArticlesByCategory = ({ category }) => {
 };
 
 export default ArticlesByCategory;
+
 

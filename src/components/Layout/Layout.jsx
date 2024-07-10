@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./leyout.module.scss";
+import styles from "./layout.module.scss";
 import Link from "next/link";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -7,6 +7,8 @@ import Header from "../Header";
 import Hamburger from "../hamburger";
 import Navbar from "../navbar";
 import Footer from "../footer";
+import LazyImage from "../LazyImage/LazyImage";
+import { prefetchImages } from "../../utils/prefetchImages";
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
@@ -20,6 +22,9 @@ const Layout = () => {
         const data = await response.json();
         const sortedArticles = data.sort((a, b) => b.id - a.id);
         setArticles(sortedArticles);
+
+        const imageUrls = data.map(article => article.img);
+        prefetchImages(imageUrls);
       } catch (error) {
         console.error('Errore nel recupero degli articoli:', error);
       }
@@ -51,8 +56,8 @@ const Layout = () => {
   return (
     <div className={styles.layout}>
       <Header toggleMenu={toggleMenu} />
-      <Hamburger  />
-      <Navbar toggleMenu={toggleMenu} isOpen={menuAperto}/>
+      <Hamburger />
+      <Navbar toggleMenu={toggleMenu} isOpen={menuAperto} />
       <div className={styles.articles}>
         <div className={styles.ContTitolo}>
           <div className={styles.freccia}>
@@ -66,7 +71,7 @@ const Layout = () => {
           <Link href={`/article/${article.id}-${article.slug}`} key={article.id}>
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
-              <img src={article.img} alt={article.titolo} />
+              <LazyImage src={article.img} alt={article.titolo} />
               <div className={styles.paragrafo}>
                 {renderContent(article.contenuto.split(" ").slice(0, 25).join(" ") + '...')}
               </div>
@@ -84,4 +89,5 @@ const Layout = () => {
 };
 
 export default Layout;
+
 
