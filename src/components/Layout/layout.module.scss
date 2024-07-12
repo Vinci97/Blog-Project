@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0b0b0b00;
+  background-image: url(../../../public/pics/sfondo.webp) ;
+  z-index: -2;
   .articles {
     color: black;
     display: flex;
@@ -157,4 +158,14 @@
     }
     }
   }
+}
+.layout::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.702);
+  z-index: -1;
 }

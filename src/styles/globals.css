@@ -81,25 +81,14 @@
   padding: 0;
   margin: 0;
 }
-html{
- z-index: -3;
-}
+
+html,
 body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   color: rgb(var(--foreground-rgb));
+  background: rgb(255, 255, 255);
   overflow-x: hidden;
-  background-image: url(../../public/pics/sfondo.webp) ;
-}
-body::before{
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.702);
-  z-index: -1;
 }
 
 body::-webkit-scrollbar {
