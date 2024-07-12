@@ -86,9 +86,8 @@ html,
 body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
-  background:#0000009b ;
+  background:#00000075 ;
 }
 body::before {
   content: "";
