@@ -19,7 +19,6 @@ const Navbar = ({ isOpen, toggleMenu }) => {
       <Link href="/Politicaesocieta" className={styles.argomento}><span className={styles.argSpan}>POLITICA, <span>GIOVANI E SOCIETÀ</span> </span></Link>
       <Link href="/Controinformazione" className={styles.argomento}>CONTROINFORMAZIONE</Link>
       <Link href="/OpenDiritto" className={styles.argomento}>OPEN DIRITTO</Link>
-      <Link href="/aSpadaTratta" className={styles.argomento}>A SPADA TRATTA</Link>
     </div>
     
   );

@@ -1,15 +1,17 @@
 .layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .articles {
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    background-color: #fff;
+    background-color: #ffffff00;
     transition: background-color 0.3s, transform 0.3s;
     padding-bottom: 5px;
     .ContTitolo{
-     
       display: flex;
       align-items: center;
       justify-content: center;
@@ -53,7 +55,7 @@
       .titolo{
           margin-left: 5px;
           font-size: 1.5rem;
-          color: black;
+          color: white;
       }
     }
 
@@ -122,8 +124,8 @@
     height: 40px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
-    background-color: black;
+    color: black;
+    background-color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -132,7 +134,8 @@
     transition: background-color 0.3s;
   
     &:hover {
-      background-color: #434343;
+      background-color: #0b0b0b;
+      color: white;
     }
   
     &:focus {

@@ -9,7 +9,6 @@ const Hamburger = () => {
       <Link href="/Politicaesocieta" className={styles.argomento}>POLITICA, GIOVANI E SOCIETÀ</Link>
       <Link href="/Controinformazione" className={styles.argomento}>CONTROINFORMAZIONE</Link>
       <Link href="/OpenDiritto" className={styles.argomento}>OPEN DIRITTO</Link>
-      <Link href="/aSpadaTratta" className={styles.argomento}>A SPADA TRATTA</Link>
     </div>
   );
 };

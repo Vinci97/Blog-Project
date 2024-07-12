@@ -10,6 +10,7 @@ import Footer from "../footer";
 import LazyImage from "../LazyImage/LazyImage";
 import { prefetchImages } from "../../utils/prefetchImages";
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import Rubrica from "../Rubrica";
 
 const Layout = () => {
   const [menuAperto, setMenuAperto] = useState(false);
@@ -67,6 +68,7 @@ const Layout = () => {
       <Header toggleMenu={toggleMenu} />
       <Hamburger />
       <Navbar toggleMenu={toggleMenu} isOpen={menuAperto} />
+      <Rubrica/>
       <div className={styles.articles}>
         <div className={styles.ContTitolo}>
           <div className={styles.freccia}>

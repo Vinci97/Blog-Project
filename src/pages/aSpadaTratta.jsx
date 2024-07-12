@@ -1,11 +1,11 @@
 import { useState } from "react"
 import styles from "../styles/aSpadaTratta.module.scss"
-import ArticlesByCategory from "@/components/ArticlesByCategory";
 import Head from "next/head"
 import Header from "@/components/Header";
 import Hamburger from "@/components/hamburger";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ArticoliSpada from "@/components/ArticoliSpada";
 
 const aSpadaTratta = () => {
     const [menuAperto, setMenuAperto] = useState(false);
@@ -54,7 +54,7 @@ const aSpadaTratta = () => {
                     <div className={styles.line1}><div className={styles.line2}></div></div>
                     <h1 className={styles.titolo}>A SPADA TRATTA</h1>
                 </div>
-                <ArticlesByCategory category="aSpadaTratta" />
+                <ArticoliSpada category="aSpadaTratta" />
             </div>
             <Footer />
         </div>

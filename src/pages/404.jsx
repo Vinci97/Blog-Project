@@ -37,7 +37,7 @@ const Custom404 = () => {
       </Head>
       <div className={styles.Custom404}>
         <h1>Errore 404</h1>
-        <p>Scusami, la pagina che stai cercando di visualizare non esiste.</p>
+        <p>la pagina che stai cercando di visualizare non esiste.</p>
         <Link className={styles.home404} href="/">
           torna alla home
         </Link>
