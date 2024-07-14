@@ -1,17 +1,16 @@
 .Rubrica{
-    height: 70px;
+    height: 90px;
     margin-top: 10px;
     width: 100%;
     max-width: 800px;
     display: flex;
     align-items: center;
-    justify-content: start;
     .container{
         display: flex;
         background: linear-gradient(to right, rgba(255, 255, 255, 0.744) 50%, rgba(255, 255, 255, 0) 50%);
         width: 100%;
         max-width: 400px;
-        height: 70px;
+        height: 75px;
         border-radius: 10px;
         .Spada{
             width: 50%;
@@ -95,8 +94,8 @@
                     color: red;
                     font-style:oblique ;
                     font-family: 'Courier New', Courier, monospace;
-                    font-weight:lighter;
-                    font-size: 14px;
+                    font-weight:bolder;
+                    font-size: 15px;
                     position: absolute;
                     left: 2px;
                     top: -2px;
