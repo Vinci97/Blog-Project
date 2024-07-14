@@ -1,87 +1,94 @@
 .navbar {
-    background: #000000;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: -120%;
+  top: 0;
+  z-index: 3;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 20vh;
+  transition: left 0.5s ease-out;
+
+  .NavHam {
+    height: 20vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
     align-items: center;
-    gap: 6%;
-    height: 100vh;
-    width: 100vw;
     position: absolute;
-    left: -120%;
     top: 0;
-    z-index: 3;
-    font-family: 'Libre Baskerville', serif;
-    padding-top: 20vh;
-    .NavHam{
-        height: 20vh;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        align-items:center;
+
+    .titleHam {
+      color: #bfa119;
+      font-size: 1.6rem;
+    }
+
+    .close {
+      height: 25px;
+      width: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0);
+      border: 0;
+      border-radius: 50px;
+      font-size: 1rem;
+      position: relative;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:before, &:after {
+        content: '';
         position: absolute;
-        top: 0;
-        .titleHam{
-            color: aliceblue;
-            font-size: 1.6rem;
-            color: #bfa119;
-        }
-        .close {
-            height: 25px;
-            width: 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0);
-            border: 0;
-            border-radius: 50px;
-            font-size: 1rem;
-            position: relative;
-            cursor: pointer;
-            font-weight: bold;
-            
-            &:before, &:after {
-              content: '';
-              position: absolute;
-              height: 3px;
-              width: 100%;
-              background: #bfa119;
-              top: 50%;
-              left: 0;
-              transform: translateY(-50%);
-            }
-            
-            &:before {
-              transform: rotate(45deg);
-            }
-            
-            &:after {
-              transform: rotate(-45deg);
-            }
-          }
+        height: 3px;
+        width: 100%;
+        background: #bfa119;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
-    .argomento{
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(85, 85, 85, 0);
-        color: #e3e3e3;
-        border: 0;
-        border-radius: 25px;
-        height: 6%;
-        font-size: 1.1rem;
-        font-family: 'Libre Baskerville', serif;
-        .argSpan{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-        }
-    }
-    @media (min-width: 800px) {
-      display: none;
   }
 
+  .argomento {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(85, 85, 85, 0);
+    color: #e3e3e3;
+    border: 0;
+    border-radius: 25px;
+    height: 6%;
+    font-size: 1.1rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 2%;
+    text-align: center;
+
+    .argSpan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 }
