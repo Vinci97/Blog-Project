@@ -12,7 +12,7 @@
   z-index: 3;
   font-family: 'Libre Baskerville', serif;
   padding-top: 20vh;
-  transition: left 0.5s ease-out;
+  overflow-y: auto; /* Enable scrolling */
 
   .NavHam {
     height: 20vh;
@@ -23,12 +23,13 @@
     align-items: center;
     position: absolute;
     top: 0;
-
+    
     .titleHam {
-      color: #bfa119;
+      color: aliceblue;
       font-size: 1.6rem;
+      color: #bfa119;
     }
-
+    
     .close {
       height: 25px;
       width: 25px;
@@ -43,7 +44,7 @@
       position: relative;
       cursor: pointer;
       font-weight: bold;
-
+      
       &:before, &:after {
         content: '';
         position: absolute;
@@ -54,11 +55,11 @@
         left: 0;
         transform: translateY(-50%);
       }
-
+      
       &:before {
         transform: rotate(45deg);
       }
-
+      
       &:after {
         transform: rotate(-45deg);
       }
@@ -77,9 +78,7 @@
     height: 6%;
     font-size: 1.1rem;
     font-family: 'Libre Baskerville', serif;
-    margin-bottom: 2%;
-    text-align: center;
-
+    
     .argSpan {
       display: flex;
       flex-direction: column;
@@ -91,4 +90,14 @@
   @media (min-width: 800px) {
     display: none;
   }
+
+  @media (orientation: landscape) {
+    gap: 10%; /* Increase the gap between sections */
+    
+    .argomento {
+      width: 60%; /* Adjust width for landscape mode */
+      font-size: 1rem; /* Adjust font size for landscape mode */
+    }
+  }
 }
+
