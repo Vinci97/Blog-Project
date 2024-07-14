@@ -31,7 +31,7 @@
       
     }
   
-    img {
+    .imgArt {
       
       height: 240px;
       width: 320px;
@@ -51,17 +51,17 @@
          margin-left: 5px;
          margin-right: 5px;
        }
-     }
-     .Michele{
-      height: 45px;
-      width: 45px;
-      margin: 0;
-      position: absolute;
-      right: 5px;
-      top: -25%;
-      border-radius: 50%;
-      
-     }
+      }
+      .Michele{
+       height: 45px;
+       width: 45px;
+       margin: 0;
+       position: absolute;
+       right: 5px;
+       top: -25%;
+       border-radius: 50%;
+       
+      }
     }
     .orario{
      display: flex;
@@ -113,7 +113,7 @@
       width: 800px;
       padding-left: 50px;
       padding-right: 50px;
-      img{
+      .imgArt{
    
         height: 525px;
         width: 700px;
