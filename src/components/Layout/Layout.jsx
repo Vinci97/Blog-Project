@@ -7,7 +7,6 @@ import Header from "../Header";
 import Hamburger from "../hamburger";
 import Navbar from "../navbar";
 import Footer from "../footer";
-import LazyImage from "../LazyImage/LazyImage";
 import { prefetchImages } from "../../utils/prefetchImages";
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import Rubrica from "../Rubrica";
@@ -82,7 +81,7 @@ const Layout = () => {
           <Link href={`/article/${article.id}-${article.slug}`} key={article.id}>
             <div className={styles.article}>
               <h3>{article.titolo}</h3>
-              <LazyImage src={article.img} alt={article.titolo} />
+              <img src={article.img} alt={article.titolo} />
               <div className={styles.paragrafo}>
                 {renderContent(article.contenuto.split(" ").slice(0, 25).join(" ") + '...')}
               </div>

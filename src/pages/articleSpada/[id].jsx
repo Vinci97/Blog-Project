@@ -11,7 +11,6 @@ import Header from '@/components/Header';
 import Hamburger from '@/components/hamburger';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
-import LazyImage from '@/components/LazyImage/LazyImage';
 import { prefetchImages } from '@/utils/prefetchImages';
 import LoadingSpinner from '@/components/LoadingSpinner/LoadingSpinner';
 
@@ -100,10 +99,10 @@ const ArticlePage = ({ article }) => {
       <Navbar isOpen={menuAperto} toggleMenu={toggleMenu}/>
       <div className={styles.contenuto}>
         <h1 className={styles.titolo}>{article.titolo}</h1>
-        <LazyImage src={article.img} alt={article.titolo} title={article.titolo} />
+        <img src={article.img} alt={article.titolo} title={article.titolo} />
         <div className={styles.line}>
           <div className={styles.autore}><p>di <strong>{article.autore}</strong></p></div>
-          <LazyImage name={styles.Michele} src={article.imgAut} alt={article.titolo} title={article.titolo} />
+          <img name={styles.Michele} src={article.imgAut} alt={article.titolo} title={article.titolo} />
         </div>
         <div className={styles.orario}>
           <p className={styles.orarioEst}><strong>{article.date}</strong> alle <strong>{article.ora}</strong></p>
