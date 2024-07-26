@@ -83,7 +83,7 @@ const Layout = () => {
               <h3>{article.titolo}</h3>
               <img src={article.img} alt={article.titolo} />
               <div className={styles.paragrafo}>
-                {renderContent(article.contenuto.split(" ").slice(0, 25).join(" ") + '...')}
+                {renderContent(article.contenuto.split(" ").slice(0, 40).join(" ") + '...')}
               </div>
               <div className={styles.readMore}>Continua a leggere</div>
             </div>
