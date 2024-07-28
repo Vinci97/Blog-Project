@@ -32,7 +32,8 @@ const ArticoliSpada = ({ category }) => {
   }, [category]);
 
   const renderContent = (content) => {
-    return content.split('/n/n').map((paragrafo, index) => {
+    const cleanedContent = content.replace(/\*\*/g, ''); 
+    return cleanedContent.split('\n\n').map((paragrafo, index) => {
       const isHeading = paragrafo.trim().startsWith('# ');
       const markdownClass = isHeading ? styles.sottotitolo : styles.paragrafo;
       return (
